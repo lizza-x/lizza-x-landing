@@ -76,8 +76,9 @@ export async function POST(request: Request) {
             <p style="margin: 0; white-space: pre-wrap; line-height: 1.6; font-size: 1rem; color: #2d3748;">${message}</p>
           </div>
           <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 32px 0;">
-          <p style="font-size: 0.75rem; color: #a0aec0; margin-bottom: 0; text-align: center; font-family: monospace;">
-            Generado automáticamente desde Lizza X Landing Page
+          <p style="font-size: 0.75rem; color: #a0aec0; margin-bottom: 0; text-align: center; line-height: 1.5;">
+            Este mensaje fue enviado de manera segura a través del formulario de contacto oficial en <a href="https://lizza.tech" style="color: #0071e3; text-decoration: none;">lizza.tech</a>.<br>
+            © 2026 Lizza X LLC. Todos los derechos reservados.
           </p>
         </div>
       `,
