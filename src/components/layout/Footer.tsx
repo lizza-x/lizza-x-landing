@@ -47,7 +47,7 @@ export default function Footer({ dict, lang }: FooterProps) {
             <h4 className={styles.title}>{lang === 'es' ? 'Contacto & Redes' : 'Connect'}</h4>
             <div className={styles.socialIcons}>
               <a 
-                href="https://github.com/lizza-x" 
+                href="https://github.com/lizarragadev" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={`${styles.socialLink} liquid-glass-hover`}
@@ -56,7 +56,7 @@ export default function Footer({ dict, lang }: FooterProps) {
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com/in/gustavolizarraga" 
+                href="https://linkedin.com/in/lizarragadev" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={`${styles.socialLink} liquid-glass-hover`}
@@ -65,7 +65,7 @@ export default function Footer({ dict, lang }: FooterProps) {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://x.com/lizza_x" 
+                href="https://x.com/lizarragadev" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={`${styles.socialLink} liquid-glass-hover`}
@@ -74,7 +74,7 @@ export default function Footer({ dict, lang }: FooterProps) {
                 <Twitter size={20} />
               </a>
               <a 
-                href="mailto:gustavo@lizzax.com" 
+                href="mailto:g@lizza.tech" 
                 className={`${styles.socialLink} liquid-glass-hover`}
                 aria-label="Email"
               >
@@ -89,9 +89,6 @@ export default function Footer({ dict, lang }: FooterProps) {
         <div className={styles.bottomSection}>
           <p className={styles.copyright}>
             © {currentYear} <strong>Lizza X LLC</strong>. {dict.footer.rights}
-          </p>
-          <p className={styles.legal}>
-            Wyoming Filing ID: 2025-001769271
           </p>
         </div>
       </div>

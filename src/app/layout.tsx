@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'Lizza X | Desarrollo de Software & Aplicaciones Móviles',
   description: 'Empresa de tecnología especializada en el desarrollo de aplicaciones móviles nativas (Android/iOS) e híbridas (Kotlin Multiplatform, Flutter) y soluciones de Inteligencia Artificial.',
   keywords: ['Lizza X', 'Desarrollo Mobile', 'Kotlin Multiplatform', 'Android', 'iOS', 'Swift', 'Flutter', 'Inteligencia Artificial', 'Software de Alta Calidad'],
-  authors: [{ name: 'Gustavo Lizarraga', url: 'https://github.com/lizza-x' }],
+  authors: [{ name: 'Gustavo Lizárraga', url: 'https://github.com/lizarragadev' }],
 };
 
 export default function RootLayout({
