@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Sun, Moon, Menu, X, Globe } from 'lucide-react';
 import styles from './Navbar.module.css';
 
@@ -102,7 +103,14 @@ export default function Navbar({ dict, lang }: NavbarProps) {
       <div className={styles.container}>
         {/* Brand Logo */}
         <Link href={`/${lang}`} className={styles.logo}>
-          <span className="text-gradient">Lizza X</span>
+          <Image 
+            src="/images/LogoLizzaX-horizontal.png" 
+            alt="Lizza X" 
+            width={120} 
+            height={35} 
+            className={styles.logoImage}
+            priority
+          />
         </Link>
 
         {/* Desktop Menu */}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import styles from './Footer.module.css';
 
@@ -17,7 +18,13 @@ export default function Footer({ dict, lang }: FooterProps) {
         <div className={styles.topSection}>
           <div className={styles.brand}>
             <Link href={`/${lang}`} className={styles.logo}>
-              <span className="text-gradient">Lizza X</span>
+              <Image 
+                src="/images/LogoLizzaX-horizontal.png" 
+                alt="Lizza X" 
+                width={110} 
+                height={32} 
+                className={styles.logoImage}
+              />
             </Link>
             <p className={styles.description}>
               {lang === 'es' 
