@@ -17,8 +17,9 @@ export default function Navbar({ dict, lang }: NavbarProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
-  // Sync scroll state
+  // Sync scroll state for glass transparency change
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -33,6 +34,42 @@ export default function Navbar({ dict, lang }: NavbarProps) {
     setTheme(activeTheme);
   }, []);
 
+  // IntersectionObserver to trace active section for menu highlights
+  useEffect(() => {
+    if (pathname.includes('/about')) {
+      setActiveSection('about');
+      return;
+    }
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-40% 0px -50% 0px', // trigger when occupying screen center
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const sectionIds = ['services', 'blog', 'contact'];
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    // Observe Hero top too
+    const heroEl = document.getElementById('hero');
+    if (heroEl) observer.observe(heroEl);
+
+    return () => observer.disconnect();
+  }, [pathname]);
+
   const toggleTheme = () => {
     const nextTheme = theme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', nextTheme);
@@ -42,7 +79,6 @@ export default function Navbar({ dict, lang }: NavbarProps) {
 
   const toggleLanguage = () => {
     const nextLang = lang === 'es' ? 'en' : 'es';
-    // Replace the language segment in the URL path
     const pathSegments = pathname.split('/');
     pathSegments[1] = nextLang;
     const newPath = pathSegments.join('/') || `/${nextLang}`;
@@ -50,11 +86,16 @@ export default function Navbar({ dict, lang }: NavbarProps) {
   };
 
   const menuItems = [
-    { label: dict.nav.services, href: '/#services' },
-    { label: dict.nav.blog, href: '/#blog' },
-    { label: dict.nav.contact, href: '/#contact' },
-    { label: dict.nav.about, href: '/about' },
+    { label: dict.nav.services, href: '/#services', id: 'services' },
+    { label: dict.nav.blog, href: '/#blog', id: 'blog' },
+    { label: dict.nav.contact, href: '/#contact', id: 'contact' },
+    { label: dict.nav.about, href: '/about', id: 'about' },
   ];
+
+  // Helper to determine if a menu item is active
+  const isLinkActive = (item: typeof menuItems[0]) => {
+    return activeSection === item.id;
+  };
 
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''} liquid-glass`}>
@@ -68,7 +109,10 @@ export default function Navbar({ dict, lang }: NavbarProps) {
         <ul className={styles.navMenu}>
           {menuItems.map((item) => (
             <li key={item.href}>
-              <Link href={`/${lang}${item.href}`} className={styles.navLink}>
+              <Link 
+                href={`/${lang}${item.href}`} 
+                className={`${styles.navLink} ${isLinkActive(item) ? styles.activeNavLink : ''}`}
+              >
                 {item.label}
               </Link>
             </li>
@@ -114,7 +158,7 @@ export default function Navbar({ dict, lang }: NavbarProps) {
               <li key={item.href}>
                 <Link 
                   href={`/${lang}${item.href}`} 
-                  className={styles.mobileNavLink}
+                  className={`${styles.mobileNavLink} ${isLinkActive(item) ? styles.activeMobileNavLink : ''}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}

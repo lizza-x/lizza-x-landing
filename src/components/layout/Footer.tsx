@@ -24,6 +24,12 @@ export default function Footer({ dict, lang }: FooterProps) {
                 ? 'Desarrollo de software premium y soluciones avanzadas de IA para el mercado global.' 
                 : 'Premium software development and advanced AI solutions for the global market.'}
             </p>
+            <address className={styles.address}>
+              <strong>Lizza X LLC</strong><br />
+              30 N Gould St, Ste N<br />
+              Sheridan, WY 82801<br />
+              United States
+            </address>
           </div>
 
           <div className={styles.linksGroup}>

@@ -52,9 +52,9 @@
     "title": "El Ingeniero Detrás de la X",
     "subtitle": "Gustavo Lizárraga, fundador de Lizza X.",
     "founder_title": "Gustavo Lizárraga",
-    "founder_role": "Fundador, Ingeniero de Software & DevRel",
-    "bio_p1": "Hola, soy Gustavo Lizárraga. Fundé Lizza X con la misión de construir software excepcional, formar comunidades vibrantes de tecnología y capacitar a la próxima generación de ingenieros en el mercado internacional.",
-    "bio_p2": "Con más de 13 años de experiencia en el ecosistema de desarrollo móvil y de sistemas en la nube, he trabajado como consultor, profesor universitario, conferencista internacional e instructor en línea. Mi enfoque combina la rigurosidad técnica de los principios SOLID y la arquitectura limpia con el dinamismo de la Inteligencia Artificial y las estrategias de Developer Relations (DevRel).",
+    "founder_role": "Fundador, Ingeniero en Sistemas e Informática, Arquitecto de Software & DevRel",
+    "bio_p1": "Hola, soy Gustavo Lizárraga, ingeniero en sistemas e informática. Fundé Lizza X con la misión de construir software excepcional, formar comunidades vibrantes de tecnología y capacitar a la próxima generación de ingenieros en el mercado internacional.",
+    "bio_p2": "Con más de 13 años de experiencia en el ecosistema de desarrollo móvil y de sistemas en la nube, he trabajado como ingeniero de software, consultor, profesor universitario, conferencista internacional e instructor en línea. Mi enfoque combina la rigurosidad técnica de los principios SOLID y la arquitectura limpia con el dinamismo de la Inteligencia Artificial y las estrategias de Developer Relations (DevRel).",
     "stats": {
       "experience": "Años de Experiencia",
       "apps": "Apps Desarrolladas",
@@ -73,70 +73,88 @@
     "subtitle": "Conoce los hitos clave de mi carrera dividida en mis tres grandes áreas de impacto.",
     "devJobs": [
       {
-        "role": "Ingeniero de Software & Consultor Principal",
+        "role": "Líder de Desarrollo & Fundador",
         "company": "Lizza X LLC",
         "period": "2025 - Presente",
-        "desc": "Liderazgo técnico en el diseño de arquitecturas móviles robustas (KMP, Flutter) e integración de APIs de IA generativa para clientes globales."
+        "desc": "Liderazgo técnico en el diseño de arquitecturas móviles robustas (Kotlin Multiplatform, Swift, Flutter) y desarrollo de soluciones avanzadas de IA para el mercado internacional."
       },
       {
-        "role": "Desarrollador Android Senior",
-        "company": "Tech Startups & Financieras",
-        "period": "2018 - 2024",
-        "desc": "Construcción de aplicaciones móviles corporativas con alto volumen transaccional, migración de bases de código legadas a Kotlin, y aplicación rigurosa de MVVM y Clean Architecture."
+        "role": "Ingeniero de Software Móvil",
+        "company": "Freelancer.com",
+        "period": "Jul 2016 - Presente",
+        "desc": "Construcción y entrega de más de 35 apps móviles (Kotlin, Swift, Flutter, React Native). Creador de 'yoreportoBolivia' (40k+ reportes diarios) y la app Pilot Logbook para Amaszonas."
       },
       {
-        "role": "Desarrollador de Sistemas Senior",
-        "company": "Consultoras de Software",
-        "period": "2013 - 2018",
-        "desc": "Desarrollo de portales web empresariales, diseño de bases de datos relacionales complejas y automatización de flujos de integración continua (CI/CD)."
+        "role": "Ingeniero de Software Android",
+        "company": "Mojix Inc. & CodeRoad",
+        "period": "Ene 2016 - Jun 2016",
+        "desc": "Construcción de módulos Android clave para el sector de retail en EE.UU., integración de lectores RFID y dispositivos Bluetooth con ViZix y RIoT, mejorando sistemas de inventarios."
       }
     ],
     "teachJobs": [
       {
-        "role": "Fundador e Instructor Principal",
-        "company": "Lizza Academy",
-        "period": "2021 - Presente",
-        "desc": "Creación de cursos en línea de alta especialización técnica sobre Jetpack Compose, Kotlin Multiplatform, SwiftUI y Clean Architecture, capacitando a más de 16,000 alumnos en todo el mundo."
+        "role": "Autor de Contenidos & Escritor Técnico",
+        "company": "Droidcon Academy",
+        "period": "Abr 2024 - Presente",
+        "desc": "Redacción de eBooks de alta especialización técnica, artículos de Android/Flutter y diseño de rutas de aprendizaje orientadas a estándares globales."
       },
       {
-        "role": "Profesor de Desarrollo Móvil & Sistemas",
-        "company": "Universidades de Prestigio",
-        "period": "2016 - 2023",
-        "desc": "Impartición de materias troncales de Ingeniería de Software, Patrones de Diseño, Programación Orientada a Objetos y Desarrollo Móvil Avanzado."
+        "role": "Relaciones con Desarrolladores (DevRel) & Entrenador",
+        "company": "DevExpert & Comunidades",
+        "period": "Abr 2023 - Presente",
+        "desc": "Liderazgo en capacitaciones corporativas en Kotlin/Android, facilitación de webinars, diseño de workshops prácticos y gestión de comunidades técnicas."
+      },
+      {
+        "role": "Instructor de Cursos Online & Corporativos",
+        "company": "Platzi, Henry, iQuattro, OpenWebinars",
+        "period": "2019 - Presente",
+        "desc": "Creación de programas de formación y consultoría técnica en Jetpack Compose, Kotlin Multiplatform, SwiftUI, Clean Architecture y herramientas de IA (Copilot, Cursor AI)."
+      },
+      {
+        "role": "Instructor Certificado ATC & Profesor Universitario",
+        "company": "Cognos, Universidad Franz Tamayo, UMSA PGI",
+        "period": "2012 - 2023",
+        "desc": "Facilitador de más de 25 cursos oficiales de Certificación Internacional Android ATC. Docente de Ingeniería de Software y del primer posgrado de Android en Bolivia."
       }
     ],
     "communityJobs": [
       {
-        "role": "Creador de Contenido de Tecnología",
-        "company": "YouTube & Redes Sociales",
-        "period": "2020 - Presente",
-        "desc": "Producción de tutoriales, podcasts y artículos sobre desarrollo de software y tendencias de IA con el fin de simplificar conceptos complejos para miles de programadores."
+        "role": "Fundador & Organizador de Comunidades",
+        "company": "Kotlin La Paz & GDG Android Bolivia",
+        "period": "2011 - Presente",
+        "desc": "Fundador de Kotlin La Paz y GDG Android Bolivia. Organizador de mDevConf (el evento móvil más grande de Bolivia). 250+ eventos, 125+ charlas y 50+ talleres impartidos."
       },
       {
-        "role": "Organizador y Speaker de Conferencias Tech",
-        "company": "Comunidades Globales",
-        "period": "2015 - Presente",
-        "desc": "Speaker internacional y organizador de hackathones, meetups locales de Google Developer Groups (GDG) y eventos tecnológicos en Latinoamérica y EE.UU."
+        "role": "Escritor Técnico (Technical Writer)",
+        "company": "OneSignal",
+        "period": "Mayo 2022 - Ago 2022",
+        "desc": "Escritor de guías técnicas detalladas y tutoriales de integración de notificaciones push en Android (Kotlin/Java) para mejorar la experiencia de onboarding de desarrolladores."
+      },
+      {
+        "role": "Creador de Contenido DevRel",
+        "company": "DevExpert",
+        "period": "Abr 2023 - Presente",
+        "desc": "Producción de videos educativos, recursos técnicos de código abierto y tutoriales avanzados en YouTube/TikTok para una comunidad en crecimiento de más de 10k desarrolladores."
       }
     ],
     "volunteer": [
       {
         "role": "GitHub Campus Expert",
         "company": "GitHub Education",
-        "period": "Programa Global",
-        "desc": "Liderazgo estudiantil e impulsor de la cultura de código abierto dentro de instituciones académicas, organizando talleres sobre Git, GitHub y contribuciones."
+        "period": "2019 - 2023",
+        "desc": "Liderazgo estudiantil e impulsor del código abierto dentro de instituciones académicas, organizando talleres prácticos sobre Git, GitHub y flujos de trabajo colaborativos."
       },
       {
         "role": "Auth0 Ambassador",
         "company": "Okta / Auth0",
-        "period": "Programa de Embajadores",
-        "desc": "Especialista y divulgador de mejores prácticas de ciberseguridad, gestión de identidades y autenticación segura de usuarios mediante charlas y workshops."
+        "period": "2019 - Presente",
+        "desc": "Promotor y conferencista en temas de ciberseguridad, gestión de identidades y flujos de autenticación segura de usuarios en aplicaciones móviles y web."
       },
       {
         "role": "Líder de Comunidad GDG (Google Developer Groups)",
         "company": "Google Developers",
-        "period": "Liderazgo de Comunidad",
-        "desc": "Organización y facilitación de eventos técnicos oficiales de Google sobre Android, Flutter, Firebase y Google Cloud Platform."
+        "period": "2011 - Presente",
+        "desc": "Organización y facilitación de eventos técnicos oficiales de Google sobre el ecosistema de Android, Flutter, Firebase y Google Cloud Platform."
       }
     ]
   },

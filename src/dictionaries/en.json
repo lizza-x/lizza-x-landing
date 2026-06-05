@@ -52,9 +52,9 @@
     "title": "The Engineer Behind the X",
     "subtitle": "Gustavo Lizárraga, founder of Lizza X.",
     "founder_title": "Gustavo Lizárraga",
-    "founder_role": "Founder, Software Engineer & DevRel",
-    "bio_p1": "Hi, I'm Gustavo Lizárraga. I founded Lizza X with a clear mission: to build exceptional software, foster vibrant technology communities, and train the next generation of engineers for the international market.",
-    "bio_p2": "With over 13 years of experience in the mobile development and cloud systems ecosystem, I have worked as a consultant, university professor, international speaker, and online instructor. My approach combines the technical rigor of SOLID principles and clean architecture with the dynamism of Artificial Intelligence and Developer Relations (DevRel) strategies.",
+    "founder_role": "Founder, Systems and Computer Science Engineer, Software Architect & DevRel",
+    "bio_p1": "Hi, I'm Gustavo Lizárraga, Systems and Computer Science Engineer. I founded Lizza X with a clear mission: to build exceptional software, foster vibrant technology communities, and train the next generation of engineers for the international market.",
+    "bio_p2": "With over 13 years of experience in the mobile development and cloud systems ecosystem, I have worked as a software engineer, consultant, university professor, international speaker, and online instructor. My approach combines the technical rigor of SOLID principles and clean architecture with the dynamism of Artificial Intelligence and Developer Relations (DevRel) strategies.",
     "stats": {
       "experience": "Years of Experience",
       "apps": "Apps Developed",
@@ -73,69 +73,87 @@
     "subtitle": "Discover the key milestones of my career divided into my three major areas of impact.",
     "devJobs": [
       {
-        "role": "Lead Software Engineer & Principal Consultant",
+        "role": "Lead Software Engineer & Founder",
         "company": "Lizza X LLC",
         "period": "2025 - Present",
-        "desc": "Technical leadership in designing robust mobile architectures (KMP, Flutter) and integrating generative AI APIs for global clients."
+        "desc": "Technical leadership in designing robust mobile architectures (Kotlin Multiplatform, Swift, Flutter) and building advanced AI solutions for the international market."
       },
       {
-        "role": "Senior Android Developer",
-        "company": "Tech Startups & Fintechs",
-        "period": "2018 - 2024",
-        "desc": "Building high-transaction corporate mobile apps, migrating legacy codebases to Kotlin, and rigorously applying MVVM and Clean Architecture patterns."
+        "role": "Mobile Software Engineer",
+        "company": "Freelancer.com (Self-Employed)",
+        "period": "Jul 2016 - Present",
+        "desc": "Delivered 35+ high-performance Android & iOS apps (Kotlin, Swift, Flutter, React Native). Engineered 'yoreportoBolivia' (national election app, 40k+ daily reports) and a Pilot Logbook app for Amaszonas airline."
       },
       {
-        "role": "Senior Systems Developer",
-        "company": "Software Consultancies",
-        "period": "2013 - 2018",
-        "desc": "Developing enterprise web portals, designing complex relational databases, and automating continuous integration (CI/CD) pipelines."
+        "role": "Android Software Engineer",
+        "company": "Mojix Inc. & CodeRoad",
+        "period": "Jan 2016 - Jun 2016",
+        "desc": "Built core Android modules for major U.S. retail clients, integrated RFID readers and Bluetooth devices with ViZix and RIoT platforms, and improved inventory tracking systems."
       }
     ],
     "teachJobs": [
       {
-        "role": "Founder & Lead Instructor",
-        "company": "Lizza Academy",
-        "period": "2021 - Present",
-        "desc": "Creating highly specialized technical online courses on Jetpack Compose, Kotlin Multiplatform, SwiftUI, and Clean Architecture, training over 16,000 students worldwide."
+        "role": "Content Author & Technical Writer",
+        "company": "Droidcon Academy",
+        "period": "Apr 2024 - Present",
+        "desc": "Authoring highly technical eBooks, Android/Flutter articles, courses, and structured learning paths for global developer audiences."
       },
       {
-        "role": "Professor of Mobile & Systems Development",
-        "company": "Prestigious Universities",
-        "period": "2016 - 2023",
-        "desc": "Teaching core Software Engineering subjects, Design Patterns, Object-Oriented Programming, and Advanced Mobile Development."
+        "role": "Developer Relations & Tech Trainer",
+        "company": "DevExpert & Communities",
+        "period": "Apr 2023 - Present",
+        "desc": "Delivering specialized Kotlin/Android trainings, managing community platforms, hosting webinars, and growing a tech community of 10k+ developers."
+      },
+      {
+        "role": "Corporate & Recorded Course Instructor",
+        "company": "Platzi, Henry, iQuattro, OpenWebinars",
+        "period": "2019 - Present",
+        "desc": "Created recorded and live training programs for corporate clients on Jetpack Compose, Kotlin Multiplatform, SwiftUI, Clean Architecture, and AI tools (GitHub Copilot, Cursor AI)."
+      },
+      {
+        "role": "ATC Certified Trainer & University Professor",
+        "company": "Cognos, Franz Tamayo University, UMSA PGI",
+        "period": "2012 - 2023",
+        "desc": "Taught 25+ certified courses for ATC International Certification. Lectured on Software Engineering, advanced mobile development, and postgraduate Java/Android courses."
       }
     ],
     "communityJobs": [
       {
-        "role": "Tech Content Creator",
-        "company": "YouTube & Social Media",
-        "period": "2020 - Present",
-        "desc": "Producing tutorials, podcasts, and articles about software engineering and AI trends to simplify complex concepts for thousands of developers."
+        "role": "Founder & Community Organizer",
+        "company": "Kotlin La Paz & GDG Android Bolivia",
+        "period": "2011 - Present",
+        "desc": "Founder of Kotlin La Paz and GDG Android Bolivia. Organizer of mDevConf (Bolivia's largest mobile dev event). Hosted over 250+ events, 125+ talks, and 50+ workshops impacting 15k+ developers worldwide."
       },
       {
-        "role": "Conference Speaker & Tech Organizer",
-        "company": "Global Communities",
-        "period": "2015 - Present",
-        "desc": "International speaker and organizer of hackathons, local Google Developer Group (GDG) meetups, and technical events in Latin America and the US."
+        "role": "Technical Writer",
+        "company": "OneSignal",
+        "period": "May 2022 - Aug 2022",
+        "desc": "Wrote comprehensive technical guides and tutorials for Android (Kotlin/Java) push notifications, simplifying developer onboarding and SDK adoption."
+      },
+      {
+        "role": "DevRel Content Creator",
+        "company": "DevExpert",
+        "period": "Apr 2023 - Present",
+        "desc": "Creating technical content, blogs, newsletter resources, and short/long-form videos on YouTube and TikTok, scaling educational impact to over 10k subscribers."
       }
     ],
     "volunteer": [
       {
         "role": "GitHub Campus Expert",
         "company": "GitHub Education",
-        "period": "Global Program",
+        "period": "2019 - 2023",
         "desc": "Student leadership and open-source culture evangelist within academic institutions, organizing workshops on Git, GitHub, and contribution best practices."
       },
       {
         "role": "Auth0 Ambassador",
         "company": "Okta / Auth0",
-        "period": "Ambassador Program",
+        "period": "2019 - Present",
         "desc": "Security advocate focusing on identity management, authentication best practices, and secure user flows through talks and technical workshops."
       },
       {
         "role": "GDG (Google Developer Groups) Community Lead",
         "company": "Google Developers",
-        "period": "Community Leadership",
+        "period": "2011 - Present",
         "desc": "Organizing and speaking at official Google developer events covering Android, Flutter, Firebase, and Google Cloud Platform."
       }
     ]

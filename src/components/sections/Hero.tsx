@@ -25,7 +25,7 @@ export default function Hero({ dict, lang }: HeroProps) {
   const morphs: MorphItem[] = [
     { 
       label: 'X', 
-      color: 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)', 
+      color: '#d946ef', /* solid fuchsia/morado to prevent pixelated gradient-clipping artifacts */
       icon: <Infinity size={14} />, 
       subtitle: lang === 'es' ? 'Donde la X es una variable que puede representar cualquier cosa' : 'Where X is a variable that can represent anything'
     },
@@ -343,7 +343,7 @@ export default function Hero({ dict, lang }: HeroProps) {
   };
 
   return (
-    <section className={styles.heroSection}>
+    <section id="hero" className={styles.heroSection}>
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <div className={`${styles.badge} liquid-glass`}>
@@ -356,15 +356,13 @@ export default function Hero({ dict, lang }: HeroProps) {
             <span 
               className={styles.dynamicWord} 
               style={{
-                background: active.label === 'X' ? active.color : 'none',
-                WebkitTextFillColor: active.label === 'X' ? 'transparent' : 'initial',
-                color: active.label !== 'X' ? active.color : 'transparent',
+                color: active.color,
                 transition: 'color 0.4s ease'
               }}
             >
               {typedText}
             </span>
-            <span className={styles.cursor} style={{ color: active.label === 'X' ? 'var(--secondary)' : active.color }}>|</span>
+            <span className={styles.cursor} style={{ color: active.color }}>|</span>
           </h1>
           
           <p className={styles.subtitle}>
