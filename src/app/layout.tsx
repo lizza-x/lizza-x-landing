@@ -30,10 +30,7 @@ export default function RootLayout({
             __html: `
               (function() {
                 try {
-                  var theme = localStorage.getItem('theme');
-                  if (!theme) {
-                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                  }
+                  var theme = localStorage.getItem('theme') || 'dark';
                   document.documentElement.setAttribute('data-theme', theme);
                 } catch (e) {}
               })();

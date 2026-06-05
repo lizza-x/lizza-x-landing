@@ -36,8 +36,18 @@ export default function About({ dict, lang }: AboutProps) {
             {/* Liquid Glass Profiler Card */}
             <div className={`${styles.avatarCard} liquid-glass`}>
               <div className={styles.avatarInner}>
-                {/* Abstract animated initials since we don't have user photo */}
-                <div className={styles.initialsGlow}>GL</div>
+                {/* User avatar image with clean fallback to GL initials */}
+                <img 
+                  src="/images/gus.png" 
+                  alt="Gustavo Lizarraga" 
+                  className={styles.avatarImage}
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    const fallback = document.getElementById('initials-fallback');
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                <div id="initials-fallback" className={styles.initialsGlow} style={{ display: 'none' }}>GL</div>
               </div>
               <h3 className={styles.founderName}>{dict.about.founder_title}</h3>
               <p className={styles.founderRole}>{dict.about.founder_role}</p>

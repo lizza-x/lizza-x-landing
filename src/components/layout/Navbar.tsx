@@ -50,11 +50,11 @@ export default function Navbar({ dict, lang }: NavbarProps) {
   };
 
   const menuItems = [
-    { label: dict.nav.about, href: '#about' },
-    { label: dict.nav.services, href: '#services' },
-    { label: dict.nav.experience, href: '#experience' },
-    { label: dict.nav.blog, href: '#blog' },
-    { label: dict.nav.contact, href: '#contact' },
+    { label: dict.nav.about, href: '/about' },
+    { label: dict.nav.services, href: '/#services' },
+    { label: dict.nav.experience, href: '/about#experience' },
+    { label: dict.nav.blog, href: '/#blog' },
+    { label: dict.nav.contact, href: '/#contact' },
   ];
 
   return (

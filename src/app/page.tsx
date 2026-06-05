@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 
 export default function RootPage() {
-  // Redirect to Spanish by default
-  redirect('/es');
+  // Redirect to English by default
+  redirect('/en');
 }
