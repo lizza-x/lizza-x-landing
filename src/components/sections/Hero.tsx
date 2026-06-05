@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Sparkles, Terminal, Bot, Play, Ticket, Users, Music, HardDrive, Smartphone, FlaskConical, Rocket, Infinity } from 'lucide-react';
+import { ArrowRight, Sparkles, Terminal, Bot, Play, Ticket, Users, Music, HardDrive, Smartphone, FlaskConical, Rocket, Infinity, BookOpen, Presentation, Code2 } from 'lucide-react';
 import styles from './Hero.module.css';
 
 interface HeroProps {
@@ -17,244 +17,325 @@ interface MorphItem {
 }
 
 export default function Hero({ dict, lang }: HeroProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [typedText, setTypedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
 
   const morphs: MorphItem[] = [
+    { 
+      label: 'X', 
+      color: 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)', 
+      icon: <Infinity size={14} />, 
+      subtitle: lang === 'es' ? 'Donde la X es una variable que puede representar cualquier cosa' : 'Where X is a variable that can represent anything'
+    },
     { 
       label: 'Dev', 
       color: '#2997ff', 
       icon: <Terminal size={14} />, 
-      subtitle: lang === 'es' ? 'Desarrollo de software con código limpio y SOLID' : 'Software development with clean & SOLID code'
+      subtitle: lang === 'es' ? 'Desarrollo de sistemas a medida bajo principios SOLID' : 'Tailored systems engineering under SOLID principles'
     },
     { 
       label: 'AI', 
       color: '#ff007f', 
       icon: <Bot size={14} />, 
-      subtitle: lang === 'es' ? 'Modelos de lenguaje (LLMs) y automatizaciones' : 'Language models (LLMs) & automation workflow'
+      subtitle: lang === 'es' ? 'Integración de modelos de lenguaje, RAG y agentes autónomos' : 'Integration of language models, RAG, & autonomous agents'
     },
     { 
-      label: 'Learn', 
+      label: 'Academy', 
       color: '#fbbf24', 
-      icon: <Play size={14} />, 
-      subtitle: lang === 'es' ? 'Capacitación y mentorías de ingeniería avanzada' : 'Advanced engineering training & mentorship'
+      icon: <BookOpen size={14} />, 
+      subtitle: lang === 'es' ? 'Cursos intensivos en línea de desarrollo móvil avanzado' : 'Intensive online bootcamps for advanced mobile development'
+    },
+    { 
+      label: 'Talks', 
+      color: '#a370f7', 
+      icon: <Presentation size={14} />, 
+      subtitle: lang === 'es' ? 'Charlas y conferencias técnicas sobre tecnología móvil' : 'Technical talks & keynotes on mobile technologies'
     },
     { 
       label: 'Events', 
       color: '#2dd4bf', 
       icon: <Ticket size={14} />, 
-      subtitle: lang === 'es' ? 'Organización de meetups y conferencias tech' : 'Organizing tech meetups & developer conferences'
+      subtitle: lang === 'es' ? 'Organización de hackathones y meetups de programadores' : 'Organizing hackathons & developer meetups'
     },
     { 
       label: 'Community', 
-      color: '#a370f7', 
-      icon: <Users size={14} />, 
-      subtitle: lang === 'es' ? 'Construcción de comunidades de programadores' : 'Building active developer communities'
-    },
-    { 
-      label: 'Media', 
-      color: '#34c759', 
-      icon: <Music size={14} />, 
-      subtitle: lang === 'es' ? 'Creación de contenido educativo y podcasts' : 'Educational content creation & tech podcasts'
-    },
-    { 
-      label: 'Cloud', 
-      color: '#ef4444', 
-      icon: <HardDrive size={14} />, 
-      subtitle: lang === 'es' ? 'Arquitecturas serverless y bases de datos' : 'Serverless architecture & robust databases'
-    },
-    { 
-      label: 'Mobile', 
       color: '#6366f1', 
-      icon: <Smartphone size={14} />, 
-      subtitle: lang === 'es' ? 'Apps móviles nativas (KMP, Android, iOS)' : 'Native mobile apps (KMP, Android, iOS)'
+      icon: <Users size={14} />, 
+      subtitle: lang === 'es' ? 'Construcción y facilitación de comunidades tech' : 'Building & fostering developer communities'
     },
     { 
       label: 'Labs', 
       color: '#ec4899', 
       icon: <FlaskConical size={14} />, 
-      subtitle: lang === 'es' ? 'Experimentos de software y prototipado rápido' : 'Software experimentation & rapid prototyping'
+      subtitle: lang === 'es' ? 'Prototipos rápidos e investigación de software experimental' : 'Rapid prototyping & experimental software research'
     },
     { 
-      label: 'Future', 
+      label: 'Teach', 
+      color: '#34c759', 
+      icon: <Play size={14} />, 
+      subtitle: lang === 'es' ? 'Mentorías personalizadas e instrucción universitaria' : 'One-on-one mentorship & university lectures'
+    },
+    { 
+      label: 'DevRel', 
       color: '#f97316', 
-      icon: <Rocket size={14} />, 
-      subtitle: lang === 'es' ? 'Visión tecnológica para escalar tu negocio' : 'Technology vision to scale your business'
-    },
-    { 
-      label: 'X', 
-      color: 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)', 
-      icon: <Infinity size={14} />, 
-      subtitle: lang === 'es' ? 'Donde X puede representar cualquier cosa' : 'Where X can represent anything'
+      icon: <Code2 size={14} />, 
+      subtitle: lang === 'es' ? 'Conexión y estrategias de Developer Relations para startups' : 'Developer Relations strategies & advocacy for startups'
     }
   ];
 
-  // Rotate items every 3.2 seconds
+  // Typing logic
   useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % morphs.length);
-    }, 3200);
-    return () => clearInterval(timer);
-  }, [morphs.length]);
+    const handleType = () => {
+      const current = loopNum % morphs.length;
+      const fullText = morphs[current].label;
 
+      if (isDeleting) {
+        setTypedText(fullText.substring(0, typedText.length - 1));
+        setTypingSpeed(60); // faster deleting
+      } else {
+        setTypedText(fullText.substring(0, typedText.length + 1));
+        setTypingSpeed(120); // normal typing
+      }
+
+      // If typed the whole word
+      if (!isDeleting && typedText === fullText) {
+        setTypingSpeed(2200); // stay on the completed word for 2.2 seconds
+        setIsDeleting(true);
+      } else if (isDeleting && typedText === '') {
+        setIsDeleting(false);
+        setLoopNum((prev) => prev + 1);
+        setTypingSpeed(500); // pause before starting to type next word
+      }
+    };
+
+    const timer = setTimeout(handleType, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [typedText, isDeleting, loopNum, typingSpeed, morphs.length]);
+
+  const activeIndex = loopNum % morphs.length;
   const active = morphs[activeIndex];
 
-  // Render different screen UI mockup for each morphing state
-  const renderPhoneScreen = () => {
+  // Helper to render customized layout frame types
+  const renderVisualPanel = () => {
     switch (active.label) {
       case 'Dev':
+        // Terminal Window
         return (
-          <div className={styles.terminalScreen}>
-            <div className={styles.termHeader}>
-              <span className={styles.dotRed} />
-              <span className={styles.dotYellow} />
-              <span className={styles.dotGreen} />
+          <div className={`${styles.windowFrame} liquid-glass`}>
+            <div className={styles.windowHeader}>
+              <div className={styles.windowControls}>
+                <span className={styles.dotRed} />
+                <span className={styles.dotYellow} />
+                <span className={styles.dotGreen} />
+              </div>
+              <span className={styles.windowTitle}>Developer Workspace — SOLID</span>
             </div>
-            <div className={styles.termBody}>
-              <p className={styles.termLineBlue}>$ git push origin main</p>
-              <p className={styles.termLineGreen}>Enumerating objects: 45, done.</p>
-              <p className={styles.termLine}>Counting objects: 100% (45/45), done.</p>
-              <p className={styles.termLinePurple}>Delta compression using up to 8 threads</p>
-              <p className={styles.termLine}>Writing objects: 100% (45/45), 9.61 KiB</p>
-              <p className={styles.termLineGreen}>To github.com:lizza-x/landing.git</p>
-              <p className={styles.termLineGreen}> * [new branch]      main -{'>'} main</p>
+            <div className={styles.windowBody}>
+              <p className={styles.codeLine}><span className={styles.codeKeyword}>class</span> <span className={styles.codeClass}>LizzaX</span> {'{'}</p>
+              <p className={styles.codeIndent}><span className={styles.codeAnnotation}>@Override</span></p>
+              <p className={styles.codeIndent}><span className={styles.codeKeyword}>fun</span> <span className={styles.codeFunc}>build</span>(goal: <span className={styles.codeType}>String</span>) {'{'}</p>
+              <p className={styles.codeDoubleIndent}><span className={styles.codeKeyword}>val</span> code = <span className={styles.codeString}>\"Clean Code & SOLID\"</span></p>
+              <p className={styles.codeDoubleIndent}><span className={styles.codeFunc}>compile</span>(code)</p>
+              <p className={styles.codeIndent}>{'}'}</p>
+              <p className={styles.codeLine}>{'}'}</p>
             </div>
           </div>
         );
+
       case 'AI':
+        // AI chat assistant panel
         return (
-          <div className={styles.aiChatScreen}>
-            <div className={styles.chatBubbleUser}>
-              {lang === 'es' ? 'Genera la arquitectura para mi app móvil' : 'Generate architecture for my mobile app'}
+          <div className={`${styles.windowFrame} liquid-glass`}>
+            <div className={styles.windowHeader}>
+              <div className={styles.windowControls}>
+                <span className={styles.dotRed} />
+                <span className={styles.dotYellow} />
+                <span className={styles.dotGreen} />
+              </div>
+              <span className={styles.windowTitle}>AI Assistant Node</span>
             </div>
-            <div className={styles.chatBubbleBot}>
-              <Bot size={12} className={styles.botIcon} />
-              <span>
-                {lang === 'es' 
-                  ? 'Recomiendo Clean Architecture compartiendo la lógica en Kotlin Multiplatform (KMP)...' 
-                  : 'I recommend Clean Architecture with shared logic using Kotlin Multiplatform (KMP)...'}
-              </span>
-            </div>
-          </div>
-        );
-      case 'Learn':
-        return (
-          <div className={styles.videoPlayerScreen}>
-            <div className={styles.videoThumbnail}>
-              <Play size={20} className={styles.playIcon} />
-            </div>
-            <div className={styles.videoMeta}>
-              <div className={styles.videoTitle}>Jetpack Compose Essentials</div>
-              <div className={styles.videoProgress}>
-                <div className={styles.progressBar} />
+            <div className={styles.aiChatBody}>
+              <div className={styles.chatBubbleUser}>
+                {lang === 'es' ? 'Integra un modelo RAG local.' : 'Integrate a local RAG model.'}
+              </div>
+              <div className={styles.chatBubbleBot}>
+                <Bot size={14} className={styles.botIcon} style={{ color: active.color }} />
+                <span>
+                  {lang === 'es' 
+                    ? 'Procesando vectorización de base de conocimiento mediante LLaMA 3.2...' 
+                    : 'Processing knowledge base vectorization via LLaMA 3.2...'}
+                </span>
               </div>
             </div>
           </div>
         );
+
+      case 'Academy':
+      case 'Teach':
+        // Classroom Portal board
+        return (
+          <div className={`${styles.tabletFrame} liquid-glass`}>
+            <div className={styles.tabletHeader}>
+              <div className={styles.tabletCam} />
+              <span>Lizza Academy Portal</span>
+            </div>
+            <div className={styles.tabletBody}>
+              <div className={styles.courseHeader}>
+                <BookOpen size={16} style={{ color: active.color }} />
+                <span className={styles.courseTitle}>Android Jetpack Compose</span>
+              </div>
+              <ul className={styles.lessonList}>
+                <li className={styles.lessonItemCompleted}>
+                  <input type="checkbox" checked readOnly className={styles.checkbox} />
+                  <span>1. Clean Architecture & MVVM</span>
+                </li>
+                <li className={styles.lessonItemActive} style={{ borderColor: active.color }}>
+                  <div className={styles.activeIndicator} style={{ backgroundColor: active.color }} />
+                  <span>2. Unidirectional Data Flow (UDF)</span>
+                </li>
+                <li className={styles.lessonItemPending}>
+                  <div className={styles.pendingIndicator} />
+                  <span>3. Local cache database integration</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        );
+
       case 'Events':
+      case 'Talks':
+        // Conference Ticket and Slide Deck
         return (
-          <div className={styles.ticketScreen}>
-            <div className={styles.ticketBadge}>TICKET</div>
-            <div className={styles.ticketTitle}>Lizza Dev Summit 2026</div>
-            <div className={styles.ticketQR} />
-            <div className={styles.ticketFooter}>Wyoming - Virtual</div>
+          <div className={`${styles.ticketFrame} liquid-glass`}>
+            <div className={styles.ticketBadge} style={{ background: active.color }}>
+              {active.label === 'Events' ? 'EVENT TICKET' : 'SLIDE PRESENTATION'}
+            </div>
+            <div className={styles.ticketMain}>
+              <h3 className={styles.ticketTitle}>Lizza X Tech Keynote</h3>
+              <p className={styles.ticketPresenter}>Speaker: Gustavo Lizárraga</p>
+              <div className={styles.ticketQR} style={{ borderColor: active.color }} />
+            </div>
+            <div className={styles.ticketMeta}>
+              <span>Wyoming, USA</span>
+              <span>16,000+ Students invited</span>
+            </div>
           </div>
         );
+
       case 'Community':
+        // Chat workspace
         return (
-          <div className={styles.communityScreen}>
-            <div className={styles.channelHeader}>#general-chat</div>
-            <div className={styles.memberList}>
-              <div className={styles.memberItem}>
-                <span className={styles.activeDot} />
-                <span>Gustavo Lizarraga (Founder)</span>
+          <div className={`${styles.windowFrame} liquid-glass`}>
+            <div className={styles.windowHeader}>
+              <div className={styles.windowControls}>
+                <span className={styles.dotRed} />
+                <span className={styles.dotYellow} />
+                <span className={styles.dotGreen} />
               </div>
-              <div className={styles.memberItem}>
-                <span className={styles.activeDot} />
-                <span>Alice Smith (React Dev)</span>
+              <span className={styles.windowTitle}>Discord — Tech Community</span>
+            </div>
+            <div className={styles.communityGrid}>
+              <div className={styles.channelSidebar}>
+                <div className={styles.activeChannel}>#general-chat</div>
+                <div className={styles.sidebarChannel}>#announcements</div>
+                <div className={styles.sidebarChannel}>#github-campus</div>
               </div>
-              <div className={styles.memberItem}>
-                <span className={styles.offlineDot} />
-                <span>Bob Martin (Kotlin Eng)</span>
+              <div className={styles.communityMembers}>
+                <div className={styles.memberRow}>
+                  <div className={styles.onlineStatus} />
+                  <span>Gustavo Lizárraga</span>
+                </div>
+                <div className={styles.memberRow}>
+                  <div className={styles.onlineStatus} />
+                  <span>GitHub Expert</span>
+                </div>
+                <div className={styles.memberRow}>
+                  <div className={styles.offlineStatus} />
+                  <span>Auth0 Ambassador</span>
+                </div>
               </div>
             </div>
           </div>
         );
-      case 'Media':
-        return (
-          <div className={styles.mediaScreen}>
-            <div className={styles.audioWave}>
-              <div className={`${styles.waveBar} ${styles.wave1}`} />
-              <div className={`${styles.waveBar} ${styles.wave2}`} />
-              <div className={`${styles.waveBar} ${styles.wave3}`} />
-              <div className={`${styles.waveBar} ${styles.wave4}`} />
-              <div className={`${styles.waveBar} ${styles.wave5}`} />
-            </div>
-            <div className={styles.podcastMeta}>
-              <div className={styles.podcastTitle}>The Mobile Engine</div>
-              <div className={styles.podcastEp}>Episode 42: Flutter vs KMP</div>
-            </div>
-          </div>
-        );
-      case 'Cloud':
-        return (
-          <div className={styles.cloudScreen}>
-            <div className={styles.dashboardMetric}>
-              <span className={styles.metricLabel}>API Requests</span>
-              <span className={styles.metricVal}>99.98%</span>
-            </div>
-            <div className={styles.chartMockup}>
-              <div className={styles.chartBar} style={{ height: '30%' }} />
-              <div className={styles.chartBar} style={{ height: '55%' }} />
-              <div className={styles.chartBar} style={{ height: '80%' }} />
-              <div className={styles.chartBar} style={{ height: '70%' }} />
-              <div className={styles.chartBar} style={{ height: '95%' }} />
-            </div>
-          </div>
-        );
-      case 'Mobile':
-        return (
-          <div className={styles.mobileAppScreen}>
-            <div className={styles.appHeader}>
-              <span>Lizza Wallet</span>
-            </div>
-            <div className={styles.balanceCard}>
-              <div className={styles.balanceTitle}>Balance</div>
-              <div className={styles.balanceAmount}>$12,450.00</div>
-            </div>
-            <div className={styles.flexGrid}>
-              <div className={styles.gridBtn}>Send</div>
-              <div className={styles.gridBtn}>Receive</div>
-            </div>
-          </div>
-        );
+
       case 'Labs':
+        // Labs Neural Simulation
         return (
-          <div className={styles.labsScreen}>
-            <div className={styles.spinnerWrapper}>
-              <div className={styles.labSpinner} />
+          <div className={`${styles.windowFrame} liquid-glass`}>
+            <div className={styles.windowHeader}>
+              <div className={styles.windowControls}>
+                <span className={styles.dotRed} />
+                <span className={styles.dotYellow} />
+                <span className={styles.dotGreen} />
+              </div>
+              <span className={styles.windowTitle}>Labs Simulator node-42</span>
             </div>
-            <div className={styles.labText}>Simulating Neural Node...</div>
+            <div className={styles.labsBody}>
+              <div className={styles.spinnerCircle} style={{ borderTopColor: active.color }} />
+              <div className={styles.simulationText} style={{ color: active.color }}>
+                {lang === 'es' ? 'Simulando red neuronal...' : 'Simulating neural nodes...'}
+              </div>
+              <div className={styles.graphSkeleton}>
+                <div className={styles.graphBar} style={{ height: '30%', backgroundColor: active.color }} />
+                <div className={styles.graphBar} style={{ height: '60%', backgroundColor: active.color }} />
+                <div className={styles.graphBar} style={{ height: '80%', backgroundColor: active.color }} />
+                <div className={styles.graphBar} style={{ height: '50%', backgroundColor: active.color }} />
+              </div>
+            </div>
           </div>
         );
-      case 'Future':
+
+      case 'DevRel':
+        // Metrics panel
         return (
-          <div className={styles.futureScreen}>
-            <div className={styles.cosmicCircle} />
-            <div className={styles.futureText}>X = Next Big Thing</div>
+          <div className={`${styles.windowFrame} liquid-glass`}>
+            <div className={styles.windowHeader}>
+              <div className={styles.windowControls}>
+                <span className={styles.dotRed} />
+                <span className={styles.dotYellow} />
+                <span className={styles.dotGreen} />
+              </div>
+              <span className={styles.windowTitle}>DevRel Metrics Dashboard</span>
+            </div>
+            <div className={styles.metricsBody}>
+              <div className={styles.metricGrid}>
+                <div className={styles.metricCard}>
+                  <div className={styles.metricNum}>GitHub</div>
+                  <div className={styles.metricLbl} style={{ color: active.color }}>Campus Expert</div>
+                </div>
+                <div className={styles.metricCard}>
+                  <div className={styles.metricNum}>Auth0</div>
+                  <div className={styles.metricLbl} style={{ color: active.color }}>Ambassador</div>
+                </div>
+              </div>
+              <div className={styles.devrelWave}>
+                <div className={styles.waveItem} style={{ height: '12px', background: active.color }} />
+                <div className={styles.waveItem} style={{ height: '28px', background: active.color }} />
+                <div className={styles.waveItem} style={{ height: '18px', background: active.color }} />
+                <div className={styles.waveItem} style={{ height: '36px', background: active.color }} />
+              </div>
+            </div>
           </div>
         );
+
       case 'X':
       default:
+        // Default: iPhone Mobile frame
         return (
-          <div className={styles.defaultScreen}>
-            <div className={styles.screenHeader}>
-              <div className={styles.avatarPlaceholder} />
-              <div className={styles.textSkeletonLineLong} />
-            </div>
-            <div className={styles.screenBody}>
-              <div className={`${styles.cardSkeleton} ${styles.glowCard}`} />
-              <div className={styles.cardSkeleton} />
-              <div className={styles.cardSkeleton} />
+          <div className={`${styles.phoneMockup} liquid-glass`}>
+            <div className={styles.phoneNotch} />
+            <div className={styles.phoneScreen}>
+              <div className={styles.screenHeader}>
+                <div className={styles.avatarPlaceholder} />
+                <div className={styles.textSkeletonLineLong} />
+              </div>
+              <div className={styles.screenBody}>
+                <div className={`${styles.cardSkeleton} ${styles.glowCard}`} />
+                <div className={styles.cardSkeleton} />
+                <div className={styles.cardSkeleton} />
+              </div>
             </div>
           </div>
         );
@@ -278,11 +359,12 @@ export default function Hero({ dict, lang }: HeroProps) {
                 background: active.label === 'X' ? active.color : 'none',
                 WebkitTextFillColor: active.label === 'X' ? 'transparent' : 'initial',
                 color: active.label !== 'X' ? active.color : 'transparent',
-                transition: 'color 0.4s ease, background 0.4s ease'
+                transition: 'color 0.4s ease'
               }}
             >
-              {active.label}
+              {typedText}
             </span>
+            <span className={styles.cursor} style={{ color: active.label === 'X' ? 'var(--secondary)' : active.color }}>|</span>
           </h1>
           
           <p className={styles.subtitle}>
@@ -297,7 +379,14 @@ export default function Hero({ dict, lang }: HeroProps) {
             }}>
               {active.icon}
             </div>
-            <p className={styles.expText}>{active.subtitle}</p>
+            <div>
+              <p className={styles.expText}>{active.subtitle}</p>
+              {active.label === 'X' && (
+                <p className={styles.expTextSub}>
+                  {lang === 'es' ? 'La X es lo que sea que venga después...' : 'The X is whatever comes next...'}
+                </p>
+              )}
+            </div>
           </div>
           
           <div className={styles.ctaGroup}>
@@ -311,7 +400,7 @@ export default function Hero({ dict, lang }: HeroProps) {
           </div>
         </div>
 
-        {/* Liquid Glass Apple Visual */}
+        {/* Dynamic Showcase Container */}
         <div className={styles.visualContainer}>
           <div 
             className={styles.glassCircle} 
@@ -322,13 +411,8 @@ export default function Hero({ dict, lang }: HeroProps) {
             }}
           />
           
-          {/* Glass Phone Mockup */}
-          <div className={`${styles.phoneMockup} liquid-glass`}>
-            <div className={styles.phoneNotch} />
-            <div className={styles.phoneScreen}>
-              {renderPhoneScreen()}
-            </div>
-          </div>
+          {/* Dynamic Mockup Render */}
+          {renderVisualPanel()}
 
           {/* Dynamic Floating Glass Badge */}
           <div className={`${styles.floatingBadge} liquid-glass`}>
@@ -338,9 +422,9 @@ export default function Hero({ dict, lang }: HeroProps) {
                 boxShadow: `0 0 10px ${active.label === 'X' ? '#34c759' : active.color}`
               }} />
               <div>
-                <div className={styles.skeletonTitle}>Lizza X Platform</div>
+                <div className={styles.skeletonTitle}>Lizza X Ecosystem</div>
                 <div className={styles.skeletonSubtitle}>
-                  {active.label === 'X' ? 'X = Expandable variable' : `Focus: Lizza ${active.label}`}
+                  {active.label === 'X' ? 'X = Variable' : `Focus: Lizza ${active.label}`}
                 </div>
               </div>
             </div>

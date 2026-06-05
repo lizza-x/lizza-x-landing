@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Briefcase, GraduationCap, Award, CheckCircle2 } from 'lucide-react';
+import { Briefcase, CheckCircle2, Award, Users, GraduationCap, Video } from 'lucide-react';
 import { founderStats, techStackData } from '@/data/site-data';
 import styles from './About.module.css';
 
@@ -11,9 +11,11 @@ interface AboutProps {
 }
 
 type TabType = 'all' | 'mobile' | 'web' | 'ai' | 'cloud';
+type TimelineTabType = 'dev' | 'teach' | 'community';
 
 export default function About({ dict, lang }: AboutProps) {
   const [activeTab, setActiveTab] = useState<TabType>('all');
+  const [activeTimelineTab, setActiveTimelineTab] = useState<TimelineTabType>('dev');
 
   const filteredTech = activeTab === 'all'
     ? techStackData
@@ -27,6 +29,42 @@ export default function About({ dict, lang }: AboutProps) {
     { value: 'cloud', labelES: 'Cloud/Backend', labelEN: 'Cloud/Backend' },
   ];
 
+  const timelineTabs: { value: TimelineTabType; labelES: string; labelEN: string; icon: React.ReactNode }[] = [
+    { 
+      value: 'dev', 
+      labelES: 'Desarrollo de Software', 
+      labelEN: 'Software Development', 
+      icon: <Briefcase size={14} /> 
+    },
+    { 
+      value: 'teach', 
+      labelES: 'Docencia y Academia', 
+      labelEN: 'Academia & Teaching', 
+      icon: <GraduationCap size={14} /> 
+    },
+    { 
+      value: 'community', 
+      labelES: 'Contenido y Comunidades', 
+      labelEN: 'Content & Communities', 
+      icon: <Users size={14} /> 
+    },
+  ];
+
+  // Helper to fetch the correct timeline jobs list based on active tab
+  const getActiveJobsList = () => {
+    switch (activeTimelineTab) {
+      case 'teach':
+        return dict.experience.teachJobs;
+      case 'community':
+        return dict.experience.communityJobs;
+      case 'dev':
+      default:
+        return dict.experience.devJobs;
+    }
+  };
+
+  const activeJobs = getActiveJobsList();
+
   return (
     <section id="about" className={styles.aboutSection}>
       <div className={styles.container}>
@@ -36,10 +74,9 @@ export default function About({ dict, lang }: AboutProps) {
             {/* Liquid Glass Profiler Card */}
             <div className={`${styles.avatarCard} liquid-glass`}>
               <div className={styles.avatarInner}>
-                {/* User avatar image with clean fallback to GL initials */}
                 <img 
                   src="/images/gus.png" 
-                  alt="Gustavo Lizarraga" 
+                  alt="Gustavo Lizárraga" 
                   className={styles.avatarImage}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
@@ -92,7 +129,7 @@ export default function About({ dict, lang }: AboutProps) {
           </div>
         </div>
 
-        {/* Experience & Timeline Segment */}
+        {/* Experience & Timeline Segment with Tabs */}
         <div id="experience" className={styles.experienceBlock}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.subTitle}>{dict.experience.title}</h2>
@@ -100,10 +137,25 @@ export default function About({ dict, lang }: AboutProps) {
             <p className={styles.subSubtitle}>{dict.experience.subtitle}</p>
           </div>
 
+          {/* Timeline switcher tabs */}
+          <div className={styles.timelineTabsContainer}>
+            {timelineTabs.map((tab) => (
+              <button
+                key={tab.value}
+                onClick={() => setActiveTimelineTab(tab.value)}
+                className={`${styles.timelineTabBtn} ${activeTimelineTab === tab.value ? styles.timelineTabBtnActive : ''} liquid-glass`}
+              >
+                {tab.icon}
+                <span>{lang === 'es' ? tab.labelES : tab.labelEN}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Active Timeline List */}
           <div className={styles.timeline}>
-            {dict.experience.jobs.map((job: any, index: number) => (
+            {activeJobs.map((job: any, index: number) => (
               <div key={index} className={styles.timelineItem}>
-                <div className={styles.timelineDot}>
+                <div className={styles.timelineDot} style={{ borderColor: 'var(--primary)' }}>
                   <Briefcase size={14} className={styles.dotIcon} />
                 </div>
                 <div className={`${styles.timelineContent} liquid-glass liquid-glass-hover`}>
@@ -111,6 +163,33 @@ export default function About({ dict, lang }: AboutProps) {
                   <h3 className={styles.timelineRole}>{job.role}</h3>
                   <h4 className={styles.timelineCompany}>{job.company}</h4>
                   <p className={styles.timelineDesc}>{job.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Volunteering & Recognitions section */}
+        <div className={styles.experienceBlock}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.subTitle}>{dict.about.volunteerTitle}</h2>
+            <div className={styles.titleLine} />
+            <p className={styles.subSubtitle}>{dict.about.volunteerSubtitle}</p>
+          </div>
+
+          <div className={styles.timeline}>
+            {dict.experience.volunteer.map((item: any, index: number) => (
+              <div key={index} className={styles.timelineItem}>
+                <div className={styles.timelineDot} style={{ borderColor: 'var(--secondary)' }}>
+                  <Award size={14} className={styles.dotIcon} style={{ color: 'var(--secondary)' }} />
+                </div>
+                <div className={`${styles.timelineContent} liquid-glass liquid-glass-hover`}>
+                  <span className={styles.timelinePeriod} style={{ background: 'rgba(134, 53, 247, 0.1)', color: 'var(--secondary)' }}>
+                    {item.period}
+                  </span>
+                  <h3 className={styles.timelineRole}>{item.role}</h3>
+                  <h4 className={styles.timelineCompany}>{item.company}</h4>
+                  <p className={styles.timelineDesc}>{item.desc}</p>
                 </div>
               </div>
             ))}

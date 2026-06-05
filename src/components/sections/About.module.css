@@ -208,6 +208,44 @@
   line-height: 1.6;
 }
 
+/* Timeline Tab Switchers */
+.timelineTabsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.timelineTabBtn {
+  padding: 12px 24px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--foreground-secondary);
+  cursor: pointer;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timelineTabBtnActive {
+  color: var(--foreground);
+  background: var(--glass-bg);
+  border-color: var(--primary);
+  box-shadow: 0 0 12px rgba(var(--primary-rgb), 0.2);
+}
+
+.timelineTabBtn:hover:not(.timelineTabBtnActive) {
+  border-color: var(--glass-border-hover);
+  color: var(--foreground);
+}
+
 .timeline {
   position: relative;
   max-width: 800px;
@@ -244,7 +282,7 @@
   height: 30px;
   border-radius: 50%;
   background: var(--bg-base);
-  border: 2px solid var(--primary);
+  border: 2px solid;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -258,6 +296,7 @@
 
 .timelineContent {
   padding: 24px;
+  text-align: left;
 }
 
 .timelinePeriod {

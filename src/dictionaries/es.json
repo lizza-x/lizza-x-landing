@@ -1,83 +1,148 @@
 {
   "nav": {
-    "about": "Acerca de",
+    "about": "Acerca de mí",
     "services": "Servicios",
     "experience": "Experiencia",
     "blog": "Blog",
     "contact": "Contacto"
   },
   "hero": {
-    "badge": "Desarrollo de Software & Inteligencia Artificial",
+    "badge": "Lizza X — Innovación, Software & Educación",
     "title_part1": "Ingeniería de software que crea",
     "title_part2": "impacto global",
-    "subtitle": "En Lizza X diseñamos y desarrollamos productos digitales escalables y de alto rendimiento. Especializados en aplicaciones móviles nativas e híbridas, soluciones de Inteligencia Artificial y arquitecturas en la nube.",
+    "subtitle": "En Lizza X creamos productos digitales de alto rendimiento. Especializados en desarrollo móvil nativo e híbrido, consultoría en arquitecturas de IA, infraestructura en la nube y capacitación de talento tecnológico.",
     "cta_primary": "Escríbeme hoy",
     "cta_secondary": "Ver Blog"
   },
   "services": {
-    "title": "Nuestros Servicios",
-    "subtitle": "Soluciones tecnológicas a medida diseñadas para escalar y optimizar tu negocio.",
+    "title": "Nuestras Especialidades",
+    "subtitle": "Soluciones tecnológicas integrales diseñadas para expandir, conectar y automatizar tu negocio.",
     "mobile": {
       "title": "Desarrollo de Apps Móviles",
-      "desc": "Creamos aplicaciones móviles de alto rendimiento para Android e iOS utilizando las tecnologías más modernas.",
+      "desc": "Construimos aplicaciones móviles de alto rendimiento para Android e iOS utilizando las arquitecturas y herramientas más modernas.",
       "tech": "Kotlin, Swift, Flutter, Kotlin Multiplatform"
     },
     "software": {
       "title": "Desarrollo de Software & Sistemas",
-      "desc": "Construimos plataformas SaaS, portales empresariales y sistemas de gestión escalables y seguros.",
+      "desc": "Creamos plataformas SaaS, portales corporativos y sistemas a gran escala rápidos, seguros y escalables.",
       "tech": "Next.js, Node.js, TypeScript, PostgreSQL"
     },
     "ai": {
       "title": "Soluciones de Inteligencia Artificial",
-      "desc": "Integramos modelos de lenguaje avanzados (LLMs), agentes autónomos y automatizaciones inteligentes en tus flujos de trabajo.",
-      "tech": "OpenAI, LangChain, On-Device AI, Automatizaciones"
+      "desc": "Integramos agentes autónomos, modelos de lenguaje avanzados (LLMs) y automatizaciones inteligentes en tus flujos de trabajo.",
+      "tech": "OpenAI, LangChain, On-Device AI, RAG"
     },
     "cloud": {
       "title": "Arquitectura Cloud & Serverless",
-      "desc": "Diseñamos infraestructura autoejecutable en la nube, bases de datos optimizadas y APIs de alta disponibilidad.",
-      "tech": "AWS, Supabase, Serverless Computing, CI/CD"
+      "desc": "Diseñamos infraestructura autoejecutable, APIs REST/GraphQL de alto tráfico y flujos automáticos de CI/CD.",
+      "tech": "AWS, Supabase, Serverless Computing, GitHub Actions"
+    },
+    "academy": {
+      "title": "Lizza Academy & Capacitación",
+      "desc": "Formamos equipos técnicos e ingenieros de software individuales mediante programas intensivos en tecnologías de vanguardia.",
+      "tech": "Jetpack Compose, Kotlin, Swift, Clean Architecture"
+    },
+    "devrel": {
+      "title": "DevRel & Creación de Comunidades",
+      "desc": "Ayudamos a empresas de tecnología a conectar con desarrolladores mediante conferencias, eventos y estrategias de Developer Relations.",
+      "tech": "Estrategias DevRel, Charlas Técnicas, Alianzas Tech"
     }
   },
   "about": {
-    "title": "El Motor Detrás de Lizza X",
-    "subtitle": "Un único punto de contacto para una ejecución de nivel de ingeniería global.",
-    "founder_title": "Gustavo Lizarraga",
-    "founder_role": "Fundador & Ingeniero de Software Principal",
-    "bio_p1": "Hola, soy Gustavo. Fundé Lizza X con una visión clara: elevar el estándar del desarrollo de software combinando la rigurosidad de la ingeniería con la velocidad de la Inteligencia Artificial y el diseño centrado en el usuario.",
-    "bio_p2": "Con años de experiencia en desarrollo móvil (Android nativo con Kotlin, iOS nativo con Swift y multiplataforma con Flutter/KMP) y sistemas en la nube, actúo como el arquitecto y desarrollador principal de tus proyectos. Esto garantiza que no haya pérdida de comunicación en el proceso y que cada línea de código cumpla con los más altos estándares de calidad y principios SOLID.",
+    "title": "El Ingeniero Detrás de la X",
+    "subtitle": "Gustavo Lizárraga, fundador de Lizza X.",
+    "founder_title": "Gustavo Lizárraga",
+    "founder_role": "Fundador, Ingeniero de Software & DevRel",
+    "bio_p1": "Hola, soy Gustavo Lizárraga. Fundé Lizza X con la misión de construir software excepcional, formar comunidades vibrantes de tecnología y capacitar a la próxima generación de ingenieros en el mercado internacional.",
+    "bio_p2": "Con más de 13 años de experiencia en el ecosistema de desarrollo móvil y de sistemas en la nube, he trabajado como consultor, profesor universitario, conferencista internacional e instructor en línea. Mi enfoque combina la rigurosidad técnica de los principios SOLID y la arquitectura limpia con el dinamismo de la Inteligencia Artificial y las estrategias de Developer Relations (DevRel).",
     "stats": {
       "experience": "Años de Experiencia",
-      "apps": "Apps Desplegadas",
+      "apps": "Apps Desarrolladas",
       "students": "Estudiantes Formados"
-    }
+    },
+    "tabs": {
+      "dev": "Desarrollo de Software",
+      "teach": "Docencia y Academia",
+      "community": "Contenido y Comunidades"
+    },
+    "volunteerTitle": "Voluntariados y Reconocimientos",
+    "volunteerSubtitle": "Mi participación y liderazgo en programas de tecnología globales."
   },
   "experience": {
-    "title": "Mi Trayectoria & Expertise",
-    "subtitle": "Conoce mi experiencia académica, profesional y áreas de especialización técnica.",
-    "jobs": [
+    "title": "Mi Trayectoria Profesional",
+    "subtitle": "Conoce los hitos clave de mi carrera dividida en mis tres grandes áreas de impacto.",
+    "devJobs": [
       {
-        "role": "Ingeniero de Software & Consultor Móvil",
-        "company": "Lizza X",
+        "role": "Ingeniero de Software & Consultor Principal",
+        "company": "Lizza X LLC",
         "period": "2025 - Presente",
-        "desc": "Arquitectura y desarrollo de soluciones móviles (Kotlin Multiplatform, Flutter) e integración de flujos de IA para startups y empresas internacionales en Wyoming y Latinoamérica."
-      },
-      {
-        "role": "Creador de Contenido & Instructor de Tecnología",
-        "company": "Comunidad Tech",
-        "period": "2021 - Presente",
-        "desc": "Capacitación de miles de desarrolladores en tecnologías móviles modernas (Android, Jetpack Compose, Kotlin, Swift) y mejores prácticas de arquitectura limpia."
+        "desc": "Liderazgo técnico en el diseño de arquitecturas móviles robustas (KMP, Flutter) e integración de APIs de IA generativa para clientes globales."
       },
       {
         "role": "Desarrollador Android Senior",
-        "company": "Empresas de Tecnología & Startups",
-        "period": "2019 - 2024",
-        "desc": "Liderazgo técnico en la creación de aplicaciones móviles de alta transaccionalidad, migración de código legado a Kotlin, e implementación de arquitecturas MVVM y Clean Architecture."
+        "company": "Tech Startups & Financieras",
+        "period": "2018 - 2024",
+        "desc": "Construcción de aplicaciones móviles corporativas con alto volumen transaccional, migración de bases de código legadas a Kotlin, y aplicación rigurosa de MVVM y Clean Architecture."
+      },
+      {
+        "role": "Desarrollador de Sistemas Senior",
+        "company": "Consultoras de Software",
+        "period": "2013 - 2018",
+        "desc": "Desarrollo de portales web empresariales, diseño de bases de datos relacionales complejas y automatización de flujos de integración continua (CI/CD)."
+      }
+    ],
+    "teachJobs": [
+      {
+        "role": "Fundador e Instructor Principal",
+        "company": "Lizza Academy",
+        "period": "2021 - Presente",
+        "desc": "Creación de cursos en línea de alta especialización técnica sobre Jetpack Compose, Kotlin Multiplatform, SwiftUI y Clean Architecture, capacitando a más de 16,000 alumnos en todo el mundo."
+      },
+      {
+        "role": "Profesor de Desarrollo Móvil & Sistemas",
+        "company": "Universidades de Prestigio",
+        "period": "2016 - 2023",
+        "desc": "Impartición de materias troncales de Ingeniería de Software, Patrones de Diseño, Programación Orientada a Objetos y Desarrollo Móvil Avanzado."
+      }
+    ],
+    "communityJobs": [
+      {
+        "role": "Creador de Contenido de Tecnología",
+        "company": "YouTube & Redes Sociales",
+        "period": "2020 - Presente",
+        "desc": "Producción de tutoriales, podcasts y artículos sobre desarrollo de software y tendencias de IA con el fin de simplificar conceptos complejos para miles de programadores."
+      },
+      {
+        "role": "Organizador y Speaker de Conferencias Tech",
+        "company": "Comunidades Globales",
+        "period": "2015 - Presente",
+        "desc": "Speaker internacional y organizador de hackathones, meetups locales de Google Developer Groups (GDG) y eventos tecnológicos en Latinoamérica y EE.UU."
+      }
+    ],
+    "volunteer": [
+      {
+        "role": "GitHub Campus Expert",
+        "company": "GitHub Education",
+        "period": "Programa Global",
+        "desc": "Liderazgo estudiantil e impulsor de la cultura de código abierto dentro de instituciones académicas, organizando talleres sobre Git, GitHub y contribuciones."
+      },
+      {
+        "role": "Auth0 Ambassador",
+        "company": "Okta / Auth0",
+        "period": "Programa de Embajadores",
+        "desc": "Especialista y divulgador de mejores prácticas de ciberseguridad, gestión de identidades y autenticación segura de usuarios mediante charlas y workshops."
+      },
+      {
+        "role": "Líder de Comunidad GDG (Google Developer Groups)",
+        "company": "Google Developers",
+        "period": "Liderazgo de Comunidad",
+        "desc": "Organización y facilitación de eventos técnicos oficiales de Google sobre Android, Flutter, Firebase y Google Cloud Platform."
       }
     ]
   },
   "blog": {
     "title": "Blog & Publicaciones",
-    "subtitle": "Compartiendo conocimiento sobre desarrollo móvil, ingeniería de software e Inteligencia Artificial.",
+    "subtitle": "Artículos sobre desarrollo de software, Inteligencia Artificial, docencia y comunidades técnicas.",
     "read_more": "Leer Artículo",
     "all": "Todos",
     "back_to_blog": "Volver al Blog",
@@ -85,14 +150,14 @@
   },
   "contact": {
     "title": "Hablemos de tu Proyecto",
-    "subtitle": "¿Tienes una idea o necesitas soporte técnico experto? Completa el formulario y te responderé en menos de 24 horas.",
+    "subtitle": "¿Buscas desarrollo experto, consultoría DevRel o capacitación técnica? Llena el formulario y me pondré en contacto contigo.",
     "name": "Nombre Completo",
     "email": "Correo Electrónico",
     "message": "Mensaje / Detalles del Proyecto",
     "submit": "Enviar Mensaje",
     "sending": "Enviando...",
     "success_title": "¡Mensaje Enviado!",
-    "success_desc": "Gracias por contactar con Lizza X. Gustavo se pondrá en contacto contigo muy pronto."
+    "success_desc": "Tu mensaje ha sido recibido con éxito. Gustavo se pondrá en contacto contigo muy pronto."
   },
   "footer": {
     "rights": "Todos los derechos reservados."

@@ -1,6 +1,6 @@
 export interface ServiceData {
   id: string;
-  icon: 'phone' | 'code' | 'brain' | 'cloud';
+  icon: 'phone' | 'code' | 'brain' | 'cloud' | 'play' | 'users';
   titleKey: string;
   descKey: string;
   techKey: string;
@@ -47,6 +47,20 @@ export const servicesData: ServiceData[] = [
     descKey: 'services.cloud.desc',
     techKey: 'services.cloud.tech',
   },
+  {
+    id: 'academy',
+    icon: 'play',
+    titleKey: 'services.academy.title',
+    descKey: 'services.academy.desc',
+    techKey: 'services.academy.tech',
+  },
+  {
+    id: 'devrel',
+    icon: 'users',
+    titleKey: 'services.devrel.title',
+    descKey: 'services.devrel.desc',
+    techKey: 'services.devrel.tech',
+  },
 ];
 
 export const techStackData: TechItem[] = [
@@ -76,7 +90,7 @@ export const techStackData: TechItem[] = [
 ];
 
 export const founderStats = {
-  experienceValue: '7+',
-  appsValue: '20+',
-  studentsValue: '15,000+',
+  experienceValue: '13+',
+  appsValue: '45+',
+  studentsValue: '16,000+',
 };

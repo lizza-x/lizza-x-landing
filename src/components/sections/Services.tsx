@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Code2, Cpu, Cloud } from 'lucide-react';
+import { Smartphone, Code2, Cpu, Cloud, Play, Users } from 'lucide-react';
 import { servicesData } from '@/data/site-data';
 import styles from './Services.module.css';
 
@@ -21,6 +21,10 @@ export default function Services({ dict, lang }: ServicesProps) {
         return <Cpu size={iconSize} className={styles.icon} />;
       case 'cloud':
         return <Cloud size={iconSize} className={styles.icon} />;
+      case 'play':
+        return <Play size={iconSize} className={styles.icon} />;
+      case 'users':
+        return <Users size={iconSize} className={styles.icon} />;
       default:
         return <Code2 size={iconSize} className={styles.icon} />;
     }

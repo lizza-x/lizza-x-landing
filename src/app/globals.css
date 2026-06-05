@@ -4,12 +4,12 @@
   /* Fonts */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   
-  /* Color Palette - Light Theme (Default) - More vibrant pastels for Aura */
+  /* Color Palette - Light Theme (Default) - Celeste y Morado */
   --bg-base: #f0f3f6;
-  --bg-gradient-1: #38bdf8; /* vibrant sky blue */
-  --bg-gradient-2: #f472b6; /* vibrant pink */
-  --bg-gradient-3: #fbbf24; /* vibrant amber/peach */
-  --bg-gradient-4: #2dd4bf; /* vibrant teal */
+  --bg-gradient-1: #0ea5e9; /* celeste brillante */
+  --bg-gradient-2: #a855f7; /* morado vibrante */
+  --bg-gradient-3: #d946ef; /* lila/fucsia */
+  --bg-gradient-4: #38bdf8; /* celeste suave */
   
   --foreground: #1d1d1f;
   --foreground-secondary: #515154;
@@ -40,20 +40,20 @@
 }
 
 [data-theme="dark"] {
-  /* Color Palette - Dark Theme - Neon/Cyberpunk Aura colors */
-  --bg-base: #040406;
-  --bg-gradient-1: #00f2fe; /* glowing cyan */
-  --bg-gradient-2: #ff007f; /* glowing hot pink */
-  --bg-gradient-3: #7b2cbf; /* glowing deep violet */
-  --bg-gradient-4: #059669; /* glowing emerald */
+  /* Color Palette - Dark Theme - Celeste y Morado de alta luminosidad */
+  --bg-base: #030305;
+  --bg-gradient-1: #00f2fe; /* celeste neón */
+  --bg-gradient-2: #8635f7; /* morado neón */
+  --bg-gradient-3: #d946ef; /* lila brillante */
+  --bg-gradient-4: #0071e3; /* celeste eléctrico */
   
   --foreground: #f5f5f7;
   --foreground-secondary: #a1a1a6;
   --foreground-tertiary: #86868b;
   
-  --glass-bg: rgba(12, 12, 16, 0.42);
-  --glass-border: rgba(255, 255, 255, 0.09);
-  --glass-border-hover: rgba(255, 255, 255, 0.22);
+  --glass-bg: rgba(10, 10, 14, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-hover: rgba(255, 255, 255, 0.2);
   
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.5);
@@ -71,7 +71,7 @@
   --badge-bg: rgba(41, 151, 255, 0.12);
   --badge-text: #2997ff;
   
-  --nav-bg: rgba(6, 6, 8, 0.55);
+  --nav-bg: rgba(4, 4, 6, 0.55);
   --selection: rgba(41, 151, 255, 0.3);
 }
 
@@ -92,10 +92,10 @@ html, body {
   width: 100%;
   overflow-x: hidden;
   font-family: var(--font-sans);
-  background-color: var(--bg-base);
+  background-color: transparent; /* CRITICAL: transparent to let fixed background shine through */
   color: var(--foreground);
   scroll-behavior: smooth;
-  transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 a {
@@ -114,10 +114,10 @@ button, input, textarea {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
+  z-index: -2; /* draw behind everything */
   overflow: hidden;
   pointer-events: none;
-  background-color: var(--bg-base);
+  background-color: var(--bg-base); /* CRITICAL: background base applied here */
   transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -127,7 +127,7 @@ button, input, textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  filter: blur(140px); /* slightly more blur for smoother blends */
+  filter: blur(130px); /* slightly reduced blur to make shapes more defined */
   transform: translateZ(0); /* Force GPU acceleration */
   opacity: 0.95; /* increased opacity for stronger aura */
   transition: opacity 0.8s ease;
@@ -136,44 +136,50 @@ button, input, textarea {
 .fluid-circle {
   position: absolute;
   border-radius: 50%;
-  mix-blend-mode: normal;
-  opacity: 0.7; /* increased opacity */
+  mix-blend-mode: screen; /* CRITICAL: blend mode for gorgeous overlap */
+  opacity: 0.75;
+}
+
+/* Force light mix-blend-mode on light theme */
+[data-theme="light"] .fluid-circle {
+  mix-blend-mode: multiply;
+  opacity: 0.55;
 }
 
 .fluid-circle-1 {
-  top: -15%;
-  left: -15%;
-  width: 75vw; /* increased size */
-  height: 75vw;
-  background: radial-gradient(circle, var(--bg-gradient-1) 0%, rgba(255,255,255,0) 75%);
-  animation: floatCircle1 18s infinite alternate ease-in-out; /* faster, more dynamic */
+  top: -10%;
+  left: -10%;
+  width: 80vw; /* increased size */
+  height: 80vw;
+  background: radial-gradient(circle, var(--bg-gradient-1) 0%, rgba(255,255,255,0) 70%);
+  animation: floatCircle1 22s infinite alternate ease-in-out;
 }
 
 .fluid-circle-2 {
-  top: -25%;
-  right: -15%;
-  width: 85vw;
-  height: 85vw;
-  background: radial-gradient(circle, var(--bg-gradient-2) 0%, rgba(255,255,255,0) 75%);
-  animation: floatCircle2 22s infinite alternate ease-in-out;
+  top: -15%;
+  right: -10%;
+  width: 90vw;
+  height: 90vw;
+  background: radial-gradient(circle, var(--bg-gradient-2) 0%, rgba(255,255,255,0) 70%);
+  animation: floatCircle2 26s infinite alternate ease-in-out;
 }
 
 .fluid-circle-3 {
-  bottom: -25%;
-  left: -15%;
-  width: 80vw;
-  height: 80vw;
-  background: radial-gradient(circle, var(--bg-gradient-3) 0%, rgba(255,255,255,0) 75%);
-  animation: floatCircle3 20s infinite alternate ease-in-out;
+  bottom: -20%;
+  left: -10%;
+  width: 85vw;
+  height: 85vw;
+  background: radial-gradient(circle, var(--bg-gradient-3) 0%, rgba(255,255,255,0) 70%);
+  animation: floatCircle3 24s infinite alternate ease-in-out;
 }
 
 .fluid-circle-4 {
-  bottom: -15%;
-  right: -15%;
-  width: 70vw;
-  height: 70vw;
-  background: radial-gradient(circle, var(--bg-gradient-4) 0%, rgba(255,255,255,0) 75%);
-  animation: floatCircle4 16s infinite alternate ease-in-out;
+  bottom: -10%;
+  right: -10%;
+  width: 80vw;
+  height: 80vw;
+  background: radial-gradient(circle, var(--bg-gradient-4) 0%, rgba(255,255,255,0) 70%);
+  animation: floatCircle4 20s infinite alternate ease-in-out;
 }
 
 /* Animations for Background Circles */

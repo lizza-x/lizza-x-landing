@@ -1,83 +1,148 @@
 {
   "nav": {
-    "about": "About",
+    "about": "About me",
     "services": "Services",
     "experience": "Experience",
     "blog": "Blog",
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Software Development & Artificial Intelligence",
+    "badge": "Lizza X — Innovation, Software & Education",
     "title_part1": "Software engineering that creates",
     "title_part2": "global impact",
-    "subtitle": "At Lizza X, we design and develop high-performance, scalable digital products. Specialized in native and hybrid mobile applications, Artificial Intelligence integrations, and cloud architectures.",
+    "subtitle": "At Lizza X, we build high-performance digital products. Specialized in native and hybrid mobile development, AI architecture consulting, cloud infrastructure, and tech talent training.",
     "cta_primary": "Get in touch",
     "cta_secondary": "Read Blog"
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Tailored technological solutions designed to scale and optimize your business.",
+    "title": "Our Specialties",
+    "subtitle": "Comprehensive tech solutions designed to expand, connect, and automate your business.",
     "mobile": {
       "title": "Mobile App Development",
-      "desc": "We build high-performance mobile applications for Android and iOS using the most modern technologies.",
+      "desc": "We build high-performance mobile applications for Android and iOS using the most modern architectures and tools.",
       "tech": "Kotlin, Swift, Flutter, Kotlin Multiplatform"
     },
     "software": {
       "title": "Software & Systems Development",
-      "desc": "We construct scalable and secure SaaS platforms, business portals, and management systems.",
+      "desc": "We construct fast, secure, and scalable SaaS platforms, corporate portals, and large-scale backend systems.",
       "tech": "Next.js, Node.js, TypeScript, PostgreSQL"
     },
     "ai": {
       "title": "Artificial Intelligence Solutions",
-      "desc": "We integrate advanced language models (LLMs), autonomous agents, and smart automations into your workflows.",
-      "tech": "OpenAI, LangChain, On-Device AI, Automations"
+      "desc": "We integrate autonomous agents, large language models (LLMs), and smart automations into your business workflows.",
+      "tech": "OpenAI, LangChain, On-Device AI, RAG"
     },
     "cloud": {
       "title": "Cloud & Serverless Architecture",
-      "desc": "We design self-scaling cloud infrastructures, optimized databases, and high-availability APIs.",
-      "tech": "AWS, Supabase, Serverless Computing, CI/CD"
+      "desc": "We design self-scaling cloud infrastructures, high-traffic REST/GraphQL APIs, and automated CI/CD pipelines.",
+      "tech": "AWS, Supabase, Serverless Computing, GitHub Actions"
+    },
+    "academy": {
+      "title": "Lizza Academy & Training",
+      "desc": "We train engineering teams and individual developers through intensive programs in cutting-edge tech.",
+      "tech": "Jetpack Compose, Kotlin, Swift, Clean Architecture"
+    },
+    "devrel": {
+      "title": "DevRel & Community Building",
+      "desc": "We help tech companies connect with developers through conferences, technical events, and developer relations strategies.",
+      "tech": "DevRel Strategy, Technical Talks, Tech Partnerships"
     }
   },
   "about": {
-    "title": "The Engine Behind Lizza X",
-    "subtitle": "A single point of contact for global engineering-level execution.",
-    "founder_title": "Gustavo Lizarraga",
-    "founder_role": "Founder & Lead Software Engineer",
-    "bio_p1": "Hi, I'm Gustavo. I founded Lizza X with a clear vision: to raise the standard of software development by combining engineering rigor with the speed of Artificial Intelligence and user-centered design.",
-    "bio_p2": "With years of experience in mobile development (native Android with Kotlin, native iOS with Swift, and cross-platform with Flutter/KMP) and cloud systems, I act as the lead architect and developer for your projects. This guarantees zero communication gap in the process and that every line of code complies with the highest quality standards and SOLID principles.",
+    "title": "The Engineer Behind the X",
+    "subtitle": "Gustavo Lizárraga, founder of Lizza X.",
+    "founder_title": "Gustavo Lizárraga",
+    "founder_role": "Founder, Software Engineer & DevRel",
+    "bio_p1": "Hi, I'm Gustavo Lizárraga. I founded Lizza X with a clear mission: to build exceptional software, foster vibrant technology communities, and train the next generation of engineers for the international market.",
+    "bio_p2": "With over 13 years of experience in the mobile development and cloud systems ecosystem, I have worked as a consultant, university professor, international speaker, and online instructor. My approach combines the technical rigor of SOLID principles and clean architecture with the dynamism of Artificial Intelligence and Developer Relations (DevRel) strategies.",
     "stats": {
       "experience": "Years of Experience",
-      "apps": "Deployed Apps",
+      "apps": "Apps Developed",
       "students": "Students Trained"
-    }
+    },
+    "tabs": {
+      "dev": "Software Development",
+      "teach": "Academia & Teaching",
+      "community": "Content & Communities"
+    },
+    "volunteerTitle": "Volunteering & Recognitions",
+    "volunteerSubtitle": "My participation and leadership in global technology programs."
   },
   "experience": {
-    "title": "My Path & Expertise",
-    "subtitle": "Learn about my academic, professional, and technical specialization history.",
-    "jobs": [
+    "title": "My Professional Journey",
+    "subtitle": "Discover the key milestones of my career divided into my three major areas of impact.",
+    "devJobs": [
       {
-        "role": "Software Engineer & Mobile Consultant",
-        "company": "Lizza X",
+        "role": "Lead Software Engineer & Principal Consultant",
+        "company": "Lizza X LLC",
         "period": "2025 - Present",
-        "desc": "Architechting and coding mobile solutions (Kotlin Multiplatform, Flutter) and integrating AI workflows for startups and international businesses across Wyoming and Latin America."
-      },
-      {
-        "role": "Content Creator & Tech Instructor",
-        "company": "Tech Community",
-        "period": "2021 - Present",
-        "desc": "Training thousands of developers on modern mobile technologies (Android, Jetpack Compose, Kotlin, Swift) and clean architecture best practices."
+        "desc": "Technical leadership in designing robust mobile architectures (KMP, Flutter) and integrating generative AI APIs for global clients."
       },
       {
         "role": "Senior Android Developer",
-        "company": "Tech Companies & Startups",
-        "period": "2019 - 2024",
-        "desc": "Technical lead creating highly transactional mobile apps, migrating legacy codebases to Kotlin, and implementing MVVM and Clean Architecture patterns."
+        "company": "Tech Startups & Fintechs",
+        "period": "2018 - 2024",
+        "desc": "Building high-transaction corporate mobile apps, migrating legacy codebases to Kotlin, and rigorously applying MVVM and Clean Architecture patterns."
+      },
+      {
+        "role": "Senior Systems Developer",
+        "company": "Software Consultancies",
+        "period": "2013 - 2018",
+        "desc": "Developing enterprise web portals, designing complex relational databases, and automating continuous integration (CI/CD) pipelines."
+      }
+    ],
+    "teachJobs": [
+      {
+        "role": "Founder & Lead Instructor",
+        "company": "Lizza Academy",
+        "period": "2021 - Present",
+        "desc": "Creating highly specialized technical online courses on Jetpack Compose, Kotlin Multiplatform, SwiftUI, and Clean Architecture, training over 16,000 students worldwide."
+      },
+      {
+        "role": "Professor of Mobile & Systems Development",
+        "company": "Prestigious Universities",
+        "period": "2016 - 2023",
+        "desc": "Teaching core Software Engineering subjects, Design Patterns, Object-Oriented Programming, and Advanced Mobile Development."
+      }
+    ],
+    "communityJobs": [
+      {
+        "role": "Tech Content Creator",
+        "company": "YouTube & Social Media",
+        "period": "2020 - Present",
+        "desc": "Producing tutorials, podcasts, and articles about software engineering and AI trends to simplify complex concepts for thousands of developers."
+      },
+      {
+        "role": "Conference Speaker & Tech Organizer",
+        "company": "Global Communities",
+        "period": "2015 - Present",
+        "desc": "International speaker and organizer of hackathons, local Google Developer Group (GDG) meetups, and technical events in Latin America and the US."
+      }
+    ],
+    "volunteer": [
+      {
+        "role": "GitHub Campus Expert",
+        "company": "GitHub Education",
+        "period": "Global Program",
+        "desc": "Student leadership and open-source culture evangelist within academic institutions, organizing workshops on Git, GitHub, and contribution best practices."
+      },
+      {
+        "role": "Auth0 Ambassador",
+        "company": "Okta / Auth0",
+        "period": "Ambassador Program",
+        "desc": "Security advocate focusing on identity management, authentication best practices, and secure user flows through talks and technical workshops."
+      },
+      {
+        "role": "GDG (Google Developer Groups) Community Lead",
+        "company": "Google Developers",
+        "period": "Community Leadership",
+        "desc": "Organizing and speaking at official Google developer events covering Android, Flutter, Firebase, and Google Cloud Platform."
       }
     ]
   },
   "blog": {
     "title": "Blog & Publications",
-    "subtitle": "Sharing knowledge on mobile development, software engineering, and Artificial Intelligence.",
+    "subtitle": "Articles on software engineering, Artificial Intelligence, teaching, and developer communities.",
     "read_more": "Read Article",
     "all": "All",
     "back_to_blog": "Back to Blog",
@@ -85,14 +150,14 @@
   },
   "contact": {
     "title": "Let's Talk About Your Project",
-    "subtitle": "Have an idea or need expert technical support? Fill out the form and I'll get back to you within 24 hours.",
+    "subtitle": "Looking for expert development, DevRel consulting, or technical training? Fill out the form and I'll get back to you.",
     "name": "Full Name",
     "email": "Email Address",
     "message": "Message / Project Details",
     "submit": "Send Message",
     "sending": "Sending...",
     "success_title": "Message Sent!",
-    "success_desc": "Thank you for contacting Lizza X. Gustavo will be in touch with you shortly."
+    "success_desc": "Your message was successfully received. Gustavo will be in touch with you shortly."
   },
   "footer": {
     "rights": "All rights reserved."
