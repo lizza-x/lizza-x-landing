@@ -251,17 +251,19 @@
   max-width: 800px;
   margin: 0 auto;
   width: 100%;
-  padding-left: 20px;
+  padding-left: 0;
 }
 
-.timeline::before {
+/* Vertical line segments connecting the dots, starting exactly at first dot and ending at last dot */
+.timelineItem:not(:last-child)::before {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 28px;
+  left: 14px; /* Center of the 30px dot (14px left + 1px half-line-width = 15px) */
+  top: 21px; /* Start at the center of the current dot (6px top + 15px radius) */
+  bottom: -61px; /* Extend through the item height plus the 40px margin to the next dot center */
   width: 2px;
   background: var(--glass-border);
+  z-index: 1;
 }
 
 .timelineItem {
@@ -276,7 +278,7 @@
 
 .timelineDot {
   position: absolute;
-  left: 14px;
+  left: 0px; /* Aligned to the absolute left edge of timelineItem */
   top: 6px;
   width: 30px;
   height: 30px;
