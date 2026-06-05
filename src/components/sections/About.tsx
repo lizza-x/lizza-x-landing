@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Briefcase, CheckCircle2, Award, Users, GraduationCap, Video } from 'lucide-react';
 import { founderStats, techStackData } from '@/data/site-data';
 import styles from './About.module.css';
@@ -74,17 +75,14 @@ export default function About({ dict, lang }: AboutProps) {
             {/* Liquid Glass Profiler Card */}
             <div className={`${styles.avatarCard} liquid-glass`}>
               <div className={styles.avatarInner}>
-                <img 
+                <Image 
                   src="/images/gus.png" 
                   alt="Gustavo Lizárraga" 
+                  width={110}
+                  height={110}
                   className={styles.avatarImage}
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    const fallback = document.getElementById('initials-fallback');
-                    if (fallback) fallback.style.display = 'flex';
-                  }}
+                  priority
                 />
-                <div id="initials-fallback" className={styles.initialsGlow} style={{ display: 'none' }}>GL</div>
               </div>
               <h3 className={styles.founderName}>{dict.about.founder_title}</h3>
               <p className={styles.founderRole}>{dict.about.founder_role}</p>

@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   authors: [{ name: 'Gustavo Lizárraga', url: 'https://github.com/lizarragadev' }],
 };
 
+import PageLoader from '@/components/layout/PageLoader';
+
 export default function RootLayout({
   children,
 }: {
@@ -39,6 +41,8 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <PageLoader />
+        
         {/* Animated Fluid Liquid background wrapper */}
         <div className="fluid-bg-container">
           <div className="fluid-bg-blur">
