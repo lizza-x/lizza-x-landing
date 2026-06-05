@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import styles from './PageLoader.module.css';
 
 export default function PageLoader() {
@@ -48,9 +49,16 @@ export default function PageLoader() {
         {/* Glow circle behind */}
         <div className={styles.glowBg} />
         
-        {/* Lizza X Logo */}
+        {/* Lizza X Vertical Logo */}
         <div className={styles.logoWrapper}>
-          <h1 className={`${styles.logoText} text-gradient`}>Lizza X</h1>
+          <Image 
+            src="/images/LogoLizzaX-vertical.png" 
+            alt="Lizza X" 
+            width={180} 
+            height={180} 
+            className={styles.logoImage}
+            priority
+          />
         </div>
 
         {/* Progress Counter & Bar */}

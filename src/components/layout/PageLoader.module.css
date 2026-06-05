@@ -49,6 +49,21 @@
 
 .logoWrapper {
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImage {
+  width: auto;
+  height: 180px;
+  max-width: 100%;
+  filter: drop-shadow(0 4px 15px rgba(0, 210, 255, 0.45)) drop-shadow(0 4px 15px rgba(217, 70, 239, 0.35));
+  transition: filter 0.3s ease;
+}
+
+:global([data-theme="light"]) .logoImage {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
 }
 
 .logoText {
