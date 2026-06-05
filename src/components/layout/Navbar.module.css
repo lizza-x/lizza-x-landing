@@ -11,17 +11,11 @@
   align-items: center;
   padding: 0 24px;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  background: var(--nav-bg);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--shadow-sm);
 }
 
 .scrolled {
   top: 12px;
   height: 68px;
-  box-shadow: var(--shadow-md);
-  border-color: var(--glass-border-hover);
-  background: var(--glass-bg);
 }
 
 .container {
