@@ -93,20 +93,20 @@ export default function Hero({ dict, lang }: HeroProps) {
 
       if (isDeleting) {
         setTypedText(fullText.substring(0, typedText.length - 1));
-        setTypingSpeed(60); // faster deleting
+        setTypingSpeed(80); // slower deleting for elegance
       } else {
         setTypedText(fullText.substring(0, typedText.length + 1));
-        setTypingSpeed(120); // normal typing
+        setTypingSpeed(160); // calmer typing speed
       }
 
       // If typed the whole word
       if (!isDeleting && typedText === fullText) {
-        setTypingSpeed(2200); // stay on the completed word for 2.2 seconds
+        setTypingSpeed(3800); // stay on the completed word for 3.8 seconds for readability
         setIsDeleting(true);
       } else if (isDeleting && typedText === '') {
         setIsDeleting(false);
         setLoopNum((prev) => prev + 1);
-        setTypingSpeed(500); // pause before starting to type next word
+        setTypingSpeed(800); // longer pause before typing next word
       }
     };
 
