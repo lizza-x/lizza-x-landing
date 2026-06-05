@@ -49,11 +49,11 @@ export default function Footer({ dict, lang }: FooterProps) {
           <div className={styles.linksGroup}>
             <h4 className={styles.title}>{lang === 'es' ? 'Navegación' : 'Navigation'}</h4>
             <ul className={styles.links}>
-              <li><a href="#about">{dict.nav.about}</a></li>
-              <li><a href="#services">{dict.nav.services}</a></li>
-              <li><a href="#experience">{dict.nav.experience}</a></li>
-              <li><a href="#blog">{dict.nav.blog}</a></li>
-              <li><a href="#contact">{dict.nav.contact}</a></li>
+              <li><Link href={`/${lang}/about`}>{dict.nav.about}</Link></li>
+              <li><Link href={`/${lang}/#services`}>{dict.nav.services}</Link></li>
+              <li><Link href={`/${lang}/about#experience`}>{dict.nav.experience}</Link></li>
+              <li><Link href={`/${lang}/#blog`}>{dict.nav.blog}</Link></li>
+              <li><Link href={`/${lang}/#contact`}>{dict.nav.contact}</Link></li>
             </ul>
           </div>
 
