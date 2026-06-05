@@ -23,7 +23,14 @@ export default function Footer({ dict, lang }: FooterProps) {
                 alt="Lizza X" 
                 width={110} 
                 height={32} 
-                className={styles.logoImage}
+                className={`${styles.logoImage} ${styles.logoDark}`}
+              />
+              <Image 
+                src="/images/LogoLizzaX-gray-horizontal.png" 
+                alt="Lizza X" 
+                width={110} 
+                height={32} 
+                className={`${styles.logoImage} ${styles.logoLight}`}
               />
             </Link>
             <p className={styles.description}>

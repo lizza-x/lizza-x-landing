@@ -108,7 +108,15 @@ export default function Navbar({ dict, lang }: NavbarProps) {
             alt="Lizza X" 
             width={120} 
             height={35} 
-            className={styles.logoImage}
+            className={`${styles.logoImage} ${styles.logoDark}`}
+            priority
+          />
+          <Image 
+            src="/images/LogoLizzaX-gray-horizontal.png" 
+            alt="Lizza X" 
+            width={120} 
+            height={35} 
+            className={`${styles.logoImage} ${styles.logoLight}`}
             priority
           />
         </Link>

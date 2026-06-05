@@ -49,6 +49,22 @@
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.25));
 }
 
+.logoDark {
+  display: block;
+}
+
+.logoLight {
+  display: none;
+}
+
+:global([data-theme="light"]) .logoDark {
+  display: none;
+}
+
+:global([data-theme="light"]) .logoLight {
+  display: block;
+}
+
 .navMenu {
   display: flex;
   list-style: none;
