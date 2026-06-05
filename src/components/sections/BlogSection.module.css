@@ -1,0 +1,152 @@
+.blogSection {
+  padding: 100px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--foreground);
+}
+
+.titleLine {
+  width: 50px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--foreground-secondary);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.postCard {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.postMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--foreground-tertiary);
+}
+
+.categoryBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--badge-bg);
+  border-color: var(--glass-border);
+}
+
+.tagIcon {
+  color: var(--primary);
+}
+
+.postTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.postLink {
+  color: var(--foreground);
+  transition: color 0.2s ease;
+}
+
+.postLink:hover {
+  color: var(--primary);
+}
+
+.postExcerpt {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--foreground-secondary);
+  flex-grow: 1;
+}
+
+.postFooter {
+  border-top: 1px solid var(--glass-border);
+  padding-top: 20px;
+  margin-top: 8px;
+}
+
+.readMoreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary);
+  transition: gap 0.2s ease;
+}
+
+.readMoreBtn:hover {
+  gap: 10px;
+}
+
+.arrowIcon {
+  transition: transform 0.2s ease;
+}
+
+.readMoreBtn:hover .arrowIcon {
+  transform: translate(2px, -2px);
+}
+
+.noPosts {
+  padding: 60px;
+  text-align: center;
+  color: var(--foreground-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}

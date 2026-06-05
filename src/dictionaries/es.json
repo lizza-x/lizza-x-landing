@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "about": "Acerca de",
+    "services": "Servicios",
+    "experience": "Experiencia",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "Desarrollo de Software & Inteligencia Artificial",
+    "title_part1": "Ingeniería de software que crea",
+    "title_part2": "impacto global",
+    "subtitle": "En Lizza X diseñamos y desarrollamos productos digitales escalables y de alto rendimiento. Especializados en aplicaciones móviles nativas e híbridas, soluciones de Inteligencia Artificial y arquitecturas en la nube.",
+    "cta_primary": "Escríbeme hoy",
+    "cta_secondary": "Ver Blog"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones tecnológicas a medida diseñadas para escalar y optimizar tu negocio.",
+    "mobile": {
+      "title": "Desarrollo de Apps Móviles",
+      "desc": "Creamos aplicaciones móviles de alto rendimiento para Android e iOS utilizando las tecnologías más modernas.",
+      "tech": "Kotlin, Swift, Flutter, Kotlin Multiplatform"
+    },
+    "software": {
+      "title": "Desarrollo de Software & Sistemas",
+      "desc": "Construimos plataformas SaaS, portales empresariales y sistemas de gestión escalables y seguros.",
+      "tech": "Next.js, Node.js, TypeScript, PostgreSQL"
+    },
+    "ai": {
+      "title": "Soluciones de Inteligencia Artificial",
+      "desc": "Integramos modelos de lenguaje avanzados (LLMs), agentes autónomos y automatizaciones inteligentes en tus flujos de trabajo.",
+      "tech": "OpenAI, LangChain, On-Device AI, Automatizaciones"
+    },
+    "cloud": {
+      "title": "Arquitectura Cloud & Serverless",
+      "desc": "Diseñamos infraestructura autoejecutable en la nube, bases de datos optimizadas y APIs de alta disponibilidad.",
+      "tech": "AWS, Supabase, Serverless Computing, CI/CD"
+    }
+  },
+  "about": {
+    "title": "El Motor Detrás de Lizza X",
+    "subtitle": "Un único punto de contacto para una ejecución de nivel de ingeniería global.",
+    "founder_title": "Gustavo Lizarraga",
+    "founder_role": "Fundador & Ingeniero de Software Principal",
+    "bio_p1": "Hola, soy Gustavo. Fundé Lizza X con una visión clara: elevar el estándar del desarrollo de software combinando la rigurosidad de la ingeniería con la velocidad de la Inteligencia Artificial y el diseño centrado en el usuario.",
+    "bio_p2": "Con años de experiencia en desarrollo móvil (Android nativo con Kotlin, iOS nativo con Swift y multiplataforma con Flutter/KMP) y sistemas en la nube, actúo como el arquitecto y desarrollador principal de tus proyectos. Esto garantiza que no haya pérdida de comunicación en el proceso y que cada línea de código cumpla con los más altos estándares de calidad y principios SOLID.",
+    "stats": {
+      "experience": "Años de Experiencia",
+      "apps": "Apps Desplegadas",
+      "students": "Estudiantes Formados"
+    }
+  },
+  "experience": {
+    "title": "Mi Trayectoria & Expertise",
+    "subtitle": "Conoce mi experiencia académica, profesional y áreas de especialización técnica.",
+    "jobs": [
+      {
+        "role": "Ingeniero de Software & Consultor Móvil",
+        "company": "Lizza X",
+        "period": "2025 - Presente",
+        "desc": "Arquitectura y desarrollo de soluciones móviles (Kotlin Multiplatform, Flutter) e integración de flujos de IA para startups y empresas internacionales en Wyoming y Latinoamérica."
+      },
+      {
+        "role": "Creador de Contenido & Instructor de Tecnología",
+        "company": "Comunidad Tech",
+        "period": "2021 - Presente",
+        "desc": "Capacitación de miles de desarrolladores en tecnologías móviles modernas (Android, Jetpack Compose, Kotlin, Swift) y mejores prácticas de arquitectura limpia."
+      },
+      {
+        "role": "Desarrollador Android Senior",
+        "company": "Empresas de Tecnología & Startups",
+        "period": "2019 - 2024",
+        "desc": "Liderazgo técnico en la creación de aplicaciones móviles de alta transaccionalidad, migración de código legado a Kotlin, e implementación de arquitecturas MVVM y Clean Architecture."
+      }
+    ]
+  },
+  "blog": {
+    "title": "Blog & Publicaciones",
+    "subtitle": "Compartiendo conocimiento sobre desarrollo móvil, ingeniería de software e Inteligencia Artificial.",
+    "read_more": "Leer Artículo",
+    "all": "Todos",
+    "back_to_blog": "Volver al Blog",
+    "published": "Publicado el"
+  },
+  "contact": {
+    "title": "Hablemos de tu Proyecto",
+    "subtitle": "¿Tienes una idea o necesitas soporte técnico experto? Completa el formulario y te responderé en menos de 24 horas.",
+    "name": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "message": "Mensaje / Detalles del Proyecto",
+    "submit": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success_title": "¡Mensaje Enviado!",
+    "success_desc": "Gracias por contactar con Lizza X. Gustavo se pondrá en contacto contigo muy pronto."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}

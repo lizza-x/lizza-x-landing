@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "experience": "Experience",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Software Development & Artificial Intelligence",
+    "title_part1": "Software engineering that creates",
+    "title_part2": "global impact",
+    "subtitle": "At Lizza X, we design and develop high-performance, scalable digital products. Specialized in native and hybrid mobile applications, Artificial Intelligence integrations, and cloud architectures.",
+    "cta_primary": "Get in touch",
+    "cta_secondary": "Read Blog"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Tailored technological solutions designed to scale and optimize your business.",
+    "mobile": {
+      "title": "Mobile App Development",
+      "desc": "We build high-performance mobile applications for Android and iOS using the most modern technologies.",
+      "tech": "Kotlin, Swift, Flutter, Kotlin Multiplatform"
+    },
+    "software": {
+      "title": "Software & Systems Development",
+      "desc": "We construct scalable and secure SaaS platforms, business portals, and management systems.",
+      "tech": "Next.js, Node.js, TypeScript, PostgreSQL"
+    },
+    "ai": {
+      "title": "Artificial Intelligence Solutions",
+      "desc": "We integrate advanced language models (LLMs), autonomous agents, and smart automations into your workflows.",
+      "tech": "OpenAI, LangChain, On-Device AI, Automations"
+    },
+    "cloud": {
+      "title": "Cloud & Serverless Architecture",
+      "desc": "We design self-scaling cloud infrastructures, optimized databases, and high-availability APIs.",
+      "tech": "AWS, Supabase, Serverless Computing, CI/CD"
+    }
+  },
+  "about": {
+    "title": "The Engine Behind Lizza X",
+    "subtitle": "A single point of contact for global engineering-level execution.",
+    "founder_title": "Gustavo Lizarraga",
+    "founder_role": "Founder & Lead Software Engineer",
+    "bio_p1": "Hi, I'm Gustavo. I founded Lizza X with a clear vision: to raise the standard of software development by combining engineering rigor with the speed of Artificial Intelligence and user-centered design.",
+    "bio_p2": "With years of experience in mobile development (native Android with Kotlin, native iOS with Swift, and cross-platform with Flutter/KMP) and cloud systems, I act as the lead architect and developer for your projects. This guarantees zero communication gap in the process and that every line of code complies with the highest quality standards and SOLID principles.",
+    "stats": {
+      "experience": "Years of Experience",
+      "apps": "Deployed Apps",
+      "students": "Students Trained"
+    }
+  },
+  "experience": {
+    "title": "My Path & Expertise",
+    "subtitle": "Learn about my academic, professional, and technical specialization history.",
+    "jobs": [
+      {
+        "role": "Software Engineer & Mobile Consultant",
+        "company": "Lizza X",
+        "period": "2025 - Present",
+        "desc": "Architechting and coding mobile solutions (Kotlin Multiplatform, Flutter) and integrating AI workflows for startups and international businesses across Wyoming and Latin America."
+      },
+      {
+        "role": "Content Creator & Tech Instructor",
+        "company": "Tech Community",
+        "period": "2021 - Present",
+        "desc": "Training thousands of developers on modern mobile technologies (Android, Jetpack Compose, Kotlin, Swift) and clean architecture best practices."
+      },
+      {
+        "role": "Senior Android Developer",
+        "company": "Tech Companies & Startups",
+        "period": "2019 - 2024",
+        "desc": "Technical lead creating highly transactional mobile apps, migrating legacy codebases to Kotlin, and implementing MVVM and Clean Architecture patterns."
+      }
+    ]
+  },
+  "blog": {
+    "title": "Blog & Publications",
+    "subtitle": "Sharing knowledge on mobile development, software engineering, and Artificial Intelligence.",
+    "read_more": "Read Article",
+    "all": "All",
+    "back_to_blog": "Back to Blog",
+    "published": "Published on"
+  },
+  "contact": {
+    "title": "Let's Talk About Your Project",
+    "subtitle": "Have an idea or need expert technical support? Fill out the form and I'll get back to you within 24 hours.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "message": "Message / Project Details",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success_title": "Message Sent!",
+    "success_desc": "Thank you for contacting Lizza X. Gustavo will be in touch with you shortly."
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
